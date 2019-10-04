@@ -1,0 +1,246 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: 12px tahoma;
+    line-height: 14px;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1px;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.clear-float { clear:both; }
+
+/* ////////////////////////////////////////////////////// Link มาตรฐาน ////////////////////////////////////////////////////// */
+a { font:12px tahoma; color:black; text-decoration:none; }
+a:hover { font:12px tahoma; color:black; text-decoration:none; }
+
+/* ////////////////////////////////////////////////////// Background ////////////////////////////////////////////////////// */
+body { background:#ccc; }
+
+/* ////////////////////////////////////////////////////// Float ////////////////////////////////////////////////////// */
+.fl-left { float:left; }
+.fl-right { float:right; }
+
+/* ////////////////////////////////////////////////////// Text-align ////////////////////////////////////////////////////// */
+.align-left { text-align:left; }
+.align-right { text-align:right; }
+.align-center { text-align:center; }
+
+/* ////////////////////////////////////////////////////// Font ////////////////////////////////////////////////////// */
+/* Size */
+.font-11 { font-size:11px; }
+.font-16 { font-size:16px; }
+.font-18 { font-size:18px; }
+.font-20 { font-size:20px; }
+
+/* Line-height */
+.line-height-18 { line-height:18px; }
+.line-height-20 { line-height:20px; }
+
+/* Weight */
+.bold { font-weight:bold; }
+
+/* Decorataion */
+.line-through { text-decoration:line-through; }
+
+/* Color */
+.yellow { color:#f3e720; }
+.red-dark { color:#910000; }
+.blue-full { color:blue; }
+.blue { color:#b7cbdf; }
+.orange { color:#f33e20; }
+.grey-dark { color:#7a7a7a; }
+
+/* ////////////////////////////////////////////////////// ควบคุมความกว้างหน้าเว็บทั้งหมด ////////////////////////////////////////////////////// */
+#wrap_box { position:relative; margin:0 auto; width:1003px; }
+
+/* ////////////////////////////////////////////////////// Head ////////////////////////////////////////////////////// */
+#head_box { width:1003px; }
+
+#head_row_1 { 
+    background:url("../../images/admin/head/bg_row_1.gif") repeat-x; 
+    height:29px; 
+    text-align:right;
+    color:#e6e6e6; 
+}
+#head_row_1 .pad-right { padding-right:10px; }
+#head_row_1 .pipe { font:11px tahoma; }
+#head_row_1 a { font:11px tahoma; color:#e6e6e6; line-height:26px; }
+#head_row_1 a:hover { font:11px tahoma; color:#f33e20; line-height:26px; }
+
+#head_row_2 { height:50px; background:url("../../images/admin/head/bg_row_2.gif") repeat-x; }
+#head_row_2 .img-logo { float:left; margin:8px 10px 0 15px; }
+#head_row_2 a.a-logo { font:bold 16px tahoma; color:white; line-height:48px; text-shadow: 1px 1px 0 #000000; }
+#head_row_2 a:hover.a-logo { color:#b7cbdf; }
+
+/* -------------------- Menu -------------------- */
+ul.tabs { position:relative; display:table; }
+ul.tabs li { position:relative; float:left; display:table-cell; }
+ul.tabs a, ul.tabs span { position:relative; display:block; }
+
+/* Dropdown */
+ul.dropdown { display:block; position:absolute; z-index:999; display:none; left:0; }
+ul.dropdown li { margin:0; padding:0; float:none; position:relative; list-style:none; display:block; }
+ul.dropdown li a { display:block; }
+
+/* Menu */
+#menu { height:41px; background:url("../../images/admin/head/bg_row_3.gif") repeat-x; }
+#menu span { font:12px tahoma; line-height:14px; }
+#menu li { 
+    float:left; 
+    height:38px; 
+    background:url("../../images/admin/head/menu_pipe.gif") right no-repeat; 
+    padding:0 12px 0 10px; 
+}
+#menu li:hover, #menu li.active { 
+    background:white url("../../images/admin/head/menu_pipe.gif") right no-repeat; 
+}
+
+#menu li.hasmore { 
+    float:left; 
+    height:38px; 
+    background:url("../../images/admin/head/menu_pipe_more.gif") right no-repeat; 
+    padding:0 33px 0 10px; 
+}
+#menu li.hasmore:hover, #menu li.hasmore_active { 
+    background:white url("../../images/admin/head/menu_pipe_more.gif") right no-repeat; 
+}
+
+#menu li.hasmore_active { 
+    float:left; 
+    height:38px; 
+    padding:0 33px 0 10px; 
+}
+
+#menu a, #menu span { font-weight:bold; color:#454557; text-shadow: 1px 1px 0 #f2f2f2; line-height:38px; }
+#menu ul.dropdown { padding:0 10px 5px 10px; background:url("../../images/admin/head/bg_black_trans.png") repeat; width:400px; border-top:1px solid #ccc; }
+#menu ul.dropdown li { float:left; width:178px; background:none; }
+#menu ul.dropdown li a { border-bottom: 1px dashed #e5cd8e; overflow: hidden; font-weight:bold; color:white; text-shadow:none; }
+#menu ul.dropdown li:last-child a { border-bottom-width: 0; }
+#menu ul.dropdown li a:hover { background: url("../../images/admin/icons/bullet_right.png") no-repeat left center; color:yellow; }
+#menu ul.dropdown li a.active {
+    color:yellow;
+}
+
+#head_row_3 { height:41px; background:url("../../images/admin/head/bg_row_3.gif") repeat-x; }
+#head_row_3 span { font:12px tahoma; line-height:14px; }
+
+/*#head_row_3 li { 
+    float:left; 
+    height:38px; 
+    background:url("../../images/admin/head/menu_pipe.gif") right no-repeat; 
+    padding:0 12px 0 10px; 
+}
+#head_row_3 li:hover, #head_row_3 li.active { 
+    background:white url("../../images/admin/head/menu_pipe.gif") right no-repeat; 
+}
+
+#head_row_3 a { font-weight:bold; color:#454557; text-shadow: 1px 1px 0 #f2f2f2; line-height:38px; }*/
+
+/* ////////////////////////////////////////////////////// Body ////////////////////////////////////////////////////// */
+#body_box { width:100%; background:white; padding:15px 0; }
+
+/* ////////////////////////////////////////////////////// Foot ////////////////////////////////////////////////////// */
+#foot_box { 
+    width:100%; 
+    background:black; 
+    border-top:5px solid #ccc; 
+    text-align:center;
+    padding:15px 0;
+}
+
+#foot_menu_box { float:left; }
+#foot_copyright_box { float:right; }
+
+#foot_box a { font:11px tahoma; color:#e6e6e6; }
+#foot_box a:hover, #foot_box a.active { color:#f33e20; }
+
+/* ////////////////////////////////////////////////////// Alert box ////////////////////////////////////////////////////// */
+.alert_box { padding-left:57px; }
+.alert_box p { font:11px tahoma; padding-top:8px; padding-bottom:9px; }
+
+.error { 
+    background:#f9e5e6 url("../../images/icons/alert/error.png") no-repeat 15px 10px;
+    border:1px solid #e8aaad;
+    color:#b50007;
+}
+.notice { 
+    background:#f9f9e5 url("../../images/icons/alert/notice.png") no-repeat 15px 10px;
+    border:1px solid #e8e3aa;
+    color:#828400;
+}
+.info { 
+    background:#e5ecf9 url("../../images/icons/alert/info.png") no-repeat 15px 10px;
+    border:1px solid #aac6e8;
+    color:#0055b5;
+}
+.success { 
+    background:#e9f9e5 url("../../images/icons/alert/success.png") no-repeat 15px 10px;
+    border:1px solid #b4e8aa;
+    color:#1c841c;
+}
+
+/* ////////////////////////////////////////////////////// Tooltips ////////////////////////////////////////////////////// */
+#tooltip {
+    position:absolute;
+    z-index:30000;
+    padding:3px;
+    background:#363636;
+    font:bold 10px tahoma;
+    color:#FFF!important;
+}
+
+#tooltip div {
+    margin:0;
+    background:#808080;
+    padding:5px;
+    font:bold 10px tahoma;
+}
+
+#tooltip h3 {
+    color:#fff;
+    font:bold 10px tahoma;
+    padding:5px;
+    margin:0;
+    background:#5f5f5f;
+}
+
+/* css for timepicker */
+.ui-timepicker-div .ui-widget-header{ margin-bottom: 8px; }
+.ui-timepicker-div dl{ text-align: left; }
+.ui-timepicker-div dl dt{ height: 25px; }
+.ui-timepicker-div dl dd{ margin: -25px 0 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }

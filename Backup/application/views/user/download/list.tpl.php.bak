@@ -1,0 +1,34 @@
+
+<!-- BEGIN CONTENT -->
+<div id="content">
+    <div id="content_full">
+        <div id="maincontent_inner">
+            <h1>Download</h1>
+            <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.</p><br />
+        </div><!-- end maincontent inner -->
+        
+        <div style="width:920px; margin:0 auto;">
+            <?php
+                if (count($list['data'])>0) {
+                    foreach ($list['data'] as $data) {
+                        $thumb = $this->f_lib->getPathFolder($data['download_id'], $data['download_pic'], 'uploads/download');
+            ?>
+            <div class="boxmenu" style="float:left; height:300px; margin-right:0;">
+                <a href="<?=BASE_HREF;?>uploads/download/<?=$data['download_file'];?>" target="_blank">
+                    <img src="<?=$thumb;?>" alt="" class="imgborder" />
+                    <h3><?=$data['download_title'];?></h3>
+                    <p><?=$data['download_desc'];?></p>
+                </a>
+            </div>
+            
+            <?php }} else { ?>
+                ไม่มีข้อมูล
+            <?php } ?>
+                
+            <div style="clear:both;"></div>
+        </div>
+            
+        
+    </div><!-- end content left -->
+</div>
+<!-- END CONTENT -->

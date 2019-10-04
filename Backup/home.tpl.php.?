@@ -1,0 +1,167 @@
+
+
+<!-- BEGIN CONTENT -->
+<div id="content">
+    
+    <div id="content_left">
+        <div id="slide_container">
+            <div id="slider">
+                <ul>	
+                    <?php
+                        if (count($slide_list['data'])>0) {
+                            foreach ($slide_list['data'] as $data) {
+                                $data['slide_pic'] = preg_replace('/thumb/', 'large', $data['slide_pic']);
+
+                                if (is_file(PATH_UPLOADS."/slide/{$data['slide_pic']}")) $thumb = BASE_HREF."uploads/slide/{$data['slide_pic']}";
+                                else $thumb =  BASE_HREF."uploads/slide/no_pic_220.jpg";
+                    ?>
+                    <li>
+                        <a href="<?=$data['slide_link'];?>" target="_blank">
+                            <img src="<?=$thumb;?>" class="img-responsive" title="<?=$data['slide_title'];?>" alt="<?=$data['slide_title'];?>" height="229">
+                        </a>
+                    </li>
+                    <?php }} ?>
+                </ul>
+            </div><!-- end slider -->
+        </div><!-- end slide container -->
+        
+        <div id="maincontent">
+            <h1>NEWS &amp; PUBLICITIES</h1>
+            <br />
+            <!-- =======Link To BROCHURE ============-->
+            <div style="float:left; width:540px; margin-bottom:20px;">
+            <img src="<?=BASE_HREF;?>images/home-00.jpg" alt="" class="imgcontent" />
+			<h2>Press Conference : 11 Sept <br />
+			  @ Sule Shangri-La Hotel&nbsp;</h2>
+			 <img src="<?=BASE_HREF;?>images/new.gif" />Many attended medias were  in the conference…<br /><strong><a href="<?=BASE_HREF;?>http://myanmarbuilddecor.com/gallery/view/11" target="_blank">Read More</a></strong>...<img src="<?=BASE_HREF;?>images/icon_checklist.png" alt=""/>
+			 </div>
+            <!-- =======Link To BROCHURE ============-->
+             <div style="clear:both;"></div>
+            <!--
+            <?php
+                if (count($article_list['data'])>0) {
+                    foreach ($article_list['data'] as $data) {
+                        if (is_file(PATH_UPLOADS."/article/{$data['article_pic']}")) $thumb = BASE_HREF."uploads/article/{$data['article_pic']}";
+                        else $thumb =  BASE_HREF."uploads/article/no_pic_220.jpg";
+            ?>
+            <div style="float:left; width:540px; margin-bottom:20px;">
+                <a href="<?=BASE_HREF;?>article/view/<?=$data['article_id'];?>">
+                    <img src="<?=$thumb;?>" style="overflow:hidden;" width="220" height="100" alt="" class="imgleft" />
+
+                    <h3><?=$data['article_title'];?></h3>
+                    <?=$data['article_sub_title'];?>
+                </a>
+                <br />
+                <strong><a href="<?=BASE_HREF;?>article/view/<?=$data['article_id'];?>">Read More</a></strong>...
+                <img src="<?php echo BASE_HREF; ?>images/icon_checklist.png" alt=""/>
+            </div>
+            
+            <div style="clear:both;"></div>
+            
+            <?php }} ?> -->
+            
+            <?php
+                if (count($publicities_list['data'])>0) {
+                    foreach ($publicities_list['data'] as $data) {
+                        $thumb = $this->f_lib->getPath($data['publicities_id'], $data['publicities_pic'], 'uploads/publicities', 'default.jpg');
+            ?>
+            <div style="float:left; width:540px; margin-bottom:20px;">
+                <!--a href="<?=BASE_HREF;?>uploads/publicities/<?=$data['publicities_file'];?>"-->
+                   <!-- <img src="<?=$thumb;?>" style="overflow:hidden;" width="220" height="100" alt="" class="imgleft" />
+
+                    <h3><?=$data['publicities_title'];?></h3>
+                    <?=$data['publicities_sub_title'];?>-->
+                <!--/a-->
+                <img src="<?=BASE_HREF;?>images/ThaiMagazine-home.jpg" alt="" class="imgcontent" />
+                <h2>Publicities</h2>
+            <img src="<?=BASE_HREF;?>images/new.gif" /><br />
+                <strong><a href="<?=BASE_HREF;?>http://myanmarbuilddecor.com/pub">Read More</a></strong>...
+                <img src="<?php echo BASE_HREF; ?>images/icon_checklist.png" alt=""/>
+            </div>
+            
+            <div style="clear:both;"></div>
+            
+            <?php }} ?>
+            
+            <!-- =======Link To About Venue ============-->
+			<img src="<?=BASE_HREF;?>images/Page_3-home.jpg" alt="" class="imgcontent" />
+			<h2>Meet new trends, products  and Technologies from almost 100 international brands….</h2>
+	    <img src="<?=BASE_HREF;?>images/NewProductHighlights.gif" /><br /><strong><a href="<?=BASE_HREF;?>http://myanmarbuilddecor.com/pub/view/52">Read More</a></strong>...<img src="<?=BASE_HREF;?>images/icon_checklist.png" alt=""/>
+			<!-- =======End To About Venue ============-->
+            
+        </div><!-- end maincontent -->
+    </div><!-- end content left -->
+    
+    <div id="sideright">
+        <div class="sidebox">
+            <h2>Industry at a glance</h2>
+            
+            <style>
+                #news-container, #news-container ul { height:120px; overflow:hidden; }
+            </style>
+            
+            <div class="padbox">
+                <blockquote>
+                    <div id="news-container" style="margin-top:0px;">
+                        <ul>
+                            <li>
+                                Resulting from economic reform, the market for infrastructure and construction in Myanmar has been boosted actively by foreign investors particularly those from Thailand, China, South Korea and Hong Kong.
+                            </li> 
+                            <li>
+                                Foreign investment in construction and infrastructure resulted to fast development of new hotels, residential, commercial and institutional buildings.
+                            </li> 
+                            <li>
+                                The growth of construction industry by 25.4% has driven to huge demand of construction materials, interior related, décor, furniture, and accessories.
+                            </li>   
+                            <li>
+                                Business opportunities for import of construction materials and interior related product owing to the limited supply at the stage
+                            </li>
+                        </ul>
+                    </div>
+                    
+<!--                    <ul id="vertical-ticker">
+                        <li>Resulting from economic reform, the market for infrastructure and construction in Myanmar has been boosted actively by foreign investors particularly those from Thailand, China, South Korea and Hong Kong.</li>
+                        <li>Foreign investment in construction and infrastructure resulted to fast development of new hotels, residential, commercial and institutional buildings.</li>
+                        <li>The growth of construction industry by 25.4% has driven to huge demand of construction materials, interior related, décor, furniture, and accessories.</li>
+                        <li>Business opportunities for import of construction materials and interior related product owing to the limited supply at the stage</li>
+                    </ul>-->
+                </blockquote>
+                <strong><a href="<?=BASE_HREF;?>page/industry_ataglance">Read More</a></strong>...
+                <img src="<?php echo BASE_HREF; ?>images/icon_checklist.png" alt=""/>
+            </div>
+        </div><!-- end sidebox -->
+        
+        <script>
+        $(function(){
+            $('#news-container').vTicker({
+                speed: 500,
+                pause: 3000,
+                animation: 'fade',
+                mousePause: false,
+                showItems: 1
+            });
+        });
+        </script>
+        
+        <div>
+            <div class="padbox">
+                <p>
+                    <a href="<?=BASE_HREF;?>space">
+                        <img src="<?php echo BASE_HREF; ?>images/b_booking.png" alt="" class="imgleft" />
+                    </a>
+                </p>
+                <p>
+                    <a href="http://www.thevista-oem.com/ICVeX/reg/a&d">
+                        <img src="<?php echo BASE_HREF; ?>images/b_registion.png" alt="" class="imgleft" />
+                    </a>
+              </p>
+                <p>
+                    <a href="<?=BASE_HREF;?>page/special_activity">
+                        <img src="<?php echo BASE_HREF; ?>images/b_active.png" alt="" class="imgleft" />
+                    </a>
+                </p>
+            </div>
+        </div><!-- end sidebox -->
+    </div><!-- end sideright -->
+</div>
+<!-- END CONTENT -->

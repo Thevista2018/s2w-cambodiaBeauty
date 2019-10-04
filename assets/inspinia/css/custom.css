@@ -1,0 +1,11 @@
+.text-muted{
+    color: #c0392b;
+}
+
+
+/* ===============================  button =============================== */
+.btn-primary {
+    background-color: #337ab7;
+    border-color: #337ab7;
+    color: #FFF;
+}

@@ -1,0 +1,216 @@
+/* ///////////////// Form ///////////////// */
+#form_box { 
+    width:950px;
+    background:#f8f8f8;
+    border:1px solid #ddd;
+    margin:15px auto 0 auto;
+    padding:4px 4px 15px 4px;
+}
+
+/* -- Title -- */
+.form_title_box {
+    height:24px;
+    background:#e5e5e5;
+    border:1px solid #ddd;
+}
+
+.form_title_box.mg_top_10 { margin-top:10px; }
+
+.form_title_box p { 
+    padding-left:10px; 
+    font-weight:bold; 
+    color:#444444; 
+    line-height:24px; 
+    text-shadow:1px 1px 0 #f2f2f2; 
+}
+
+/* =============== All =============== */
+.form_all_box {
+/*    float:left; */
+    margin:0 auto;
+/*    background:red;*/
+}
+
+/* =============== Left =============== */
+.form_left_box {
+    float:left; 
+    width:545px; 
+}
+
+/* =============== Right =============== */
+.form_right_box {
+    float:right; 
+    width:405px; 
+}
+
+/* -- Table .tb_form -- */
+.tb_form { margin:0 auto; width:950px; margin-top:20px; }
+/*.tb_form td { border:2px solid #fff; }*/
+.tb_form td { vertical-align:middle; padding-bottom:10px; }
+.tb_form td.td_top { vertical-align:top; padding-top:5px; text-align:right; }
+
+/*.tb_form td { vertical-align:middle; padding-bottom:10px; padding-top:10px; padding-left:10px; }
+.tb_form td.td_top { vertical-align:top; padding-top:15px; text-align:right; }*/
+.tb_form td.td_middle { text-align:right; }
+.tb_form span, .tb_form p { font-size:12px; font-family:tahoma; }
+
+/* -- Span & P -- */
+.tb_form .span_topic { font-weight:bold; padding:4px 10px; background:#333333; color:white; margin-right:10px; }
+.tb_form .span_topic_yellow { font-weight:bold; padding:4px 10px; background:black; color:yellow; margin-right:10px; }
+
+.tb_form .input_error { float:left; font-size:11px; text-shadow:1px 1px 0 #ddd; color:red; padding:1px 0 0 1px; }
+.tb_form .input_notice { float:left; font-size:10px; color:#796161; padding:1px 0 0 1px; }
+
+.tb_form .star { float:left; text-shadow:1px 1px 0 #ccc; color:red; padding:7px 0 0 5px; }
+
+/* ----------------------- Elements ----------------------- */
+/* -- Group : style_1 -- */
+input.style_1 { 
+    float:left;
+    width:320px; 
+    height:22px; 
+    border:1px solid #ccc; 
+    padding:0 5px; 
+    font:13px tahoma; 
+    color:#a70;
+    margin:0; 
+}
+
+select.style_1 { 
+    display:block; 
+    float:left;
+    height:22px; 
+    vertical-align:middle; 
+    border:1px solid #ccc; 
+    margin:0; 
+}
+
+textarea.style_1 { 
+    float:left;
+    width:320px;
+    height:120px;
+    resize:none; 
+    overflow:auto;
+    border:1px solid #cccccc;
+    padding:5px; 
+    font:13px tahoma;
+    color:#a70;
+    margin:0;
+}
+
+/* -- Group : style_long -- */
+input.style_long { 
+    float:left;
+    width:620px; 
+    height:22px; 
+    border:1px solid #ccc; 
+    padding:0 5px; 
+    font:13px tahoma; 
+    color:#a70;
+    margin:0; 
+}
+
+select.style_long { 
+    background: none repeat scroll 0 0 #444444;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    font: 13px tahoma;
+    height:23px;
+    padding: 2px;
+    margin:0;
+}
+
+textarea.style_long { 
+    float:left;
+    width:620px;
+    height:120px;
+    resize:none; 
+    overflow:auto;
+    border:1px solid #cccccc;
+    padding:5px; 
+    font:13px tahoma;
+    margin:0;
+    color:#a70;
+}
+
+textarea.style_1_short { 
+    float:left;
+    width:320px;
+    height:60px;
+    resize:none; 
+    overflow:auto;
+    border:1px solid #cccccc;
+    padding:5px; 
+    font:13px tahoma;
+    color:#a70;
+    margin:0;
+}
+
+input.submit { 
+    padding:7px 15px; 
+    font:bold 14px tahoma;
+}
+
+/* -- Submit -- */
+#submit_box { 
+    width:900px; 
+    margin:20px auto 20px auto; 
+    text-align:center; 
+    padding-top:30px; 
+    border-top:1px dashed #dddddd;
+}
+
+/* --------------------------------------------------- Special --------------------------------------------------- */
+
+/* -- Elements : Ajax -- */
+div.ajax_change { 
+    position:relative; 
+    padding-right:16px; 
+}
+select.style_1_ajax { 
+    background: none repeat scroll 0 0 #444444;
+    border: 1px solid #000000;
+    color: #FFFFFF;
+    font: 13px tahoma;
+    height:23px;
+    padding: 2px;
+    margin:0;
+    
+/*    height:22px; 
+    vertical-align:middle; 
+    border:1px solid #ccc; 
+    margin:0; */
+}
+.icon_save { 
+    float:left; 
+    position:absolute; 
+    top:4px; 
+    padding-left:5px; 
+    cursor:pointer; 
+}
+
+
+#same_location { float:left; font:bold 12px tahoma; color:#6a102c; margin:5px 0 0 5px; }
+.copy { float:left; margin:3px 5px 0 0; padding:0; background:#333; }
+
+
+/* -- JQuery - Input file -- */
+input.upload { background: #aaa url("../../images/input/bg-btn.png") bottom repeat-x; padding: .4em 1.2em;border: 1px solid #aaa; color: #222; font-size: 1.2em; font-weight: bold; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; cursor: pointer; margin: 2em 0; }
+input.upload:hover { background: #eee; color: #111; border-color:#777; }
+
+
+/*custom upload elements*/
+.customfile-input { position: absolute; height: 100px; cursor: pointer; background: transparent; border: 0; opacity: 0; -moz-opacity: 0; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); z-index: 999;  }
+
+.customfile { width: 400px; background: #666; cursor: pointer; overflow: hidden; padding: 2px; border: 1px solid #444; -moz-border-radius:7px; -webkit-border-radius:7px; border-radius:7px;  position: relative; }
+.customfile-disabled { opacity: .5; filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0); cursor: default;  }
+.customfile-feedback { display: block; margin: 1px 1px 1px 5px; font-size: 1.2em; color: #fff; font-style: italic; padding: .3em .6em; }
+.customfile-feedback-populated { color: #fff; font-style: normal; font-weight: bold; padding-left: 20px; background: url("../../images/input/icon-generic.gif") left 4px no-repeat; }
+.customfile-button { border: 1px solid #999; background: #333 url("../../images/input/bg-submit.gif") bottom repeat-x;  color: #fff; font-weight: bold; float: right; width: 50px; padding: .3em .6em;  text-align: center; text-decoration: none;  font-size: 1.2em; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px;  }
+.customfile-hover .customfile-button, .customfile-focus .customfile-button  { color:#111; background: #aaa url("../../images/input/bg-btn.png") bottom repeat-x; border-color:#aaa;  padding: .3em .6em;  }
+.customfile-focus .customfile-button { outline: 1px dotted #ccc;  }
+
+/*file type icons*/
+.customfile-ext-jpg, .customfile-ext-gif, .customfile-ext-png, .customfile-ext-jpeg, .customfile-ext-bmp { background-image: url("../../images/input/icon-image.gif"); }
+.customfile-ext-mp3, .customfile-ext-mp4, .customfile-ext-mov, .customfile-ext-swf, .customfile-ext-wav, .customfile-ext-m4v { background-image: url("../../images/input/icon-media.gif"); }
+.customfile-ext-zip, .customfile-ext-tar, .customfile-ext-sit { background-image: url("../../images/input/icon-zip.gif"); }

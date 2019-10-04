@@ -1,0 +1,376 @@
+/*------------------------------------------------------------------------------ slider text */
+/* .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact,.text-slider-questions,.text-slider-product{
+    color: #FFF;
+ }
+
+.text-slider-delivery,.text-slider-returnpolicies,.text-slider-about,.text-slider-product{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+.text-slider-quality,.text-slider-questions,.text-slider-contact{
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+}
+.text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact{
+    font-size: 20px; 
+}
+.text-slider-questions,.text-slider-product{
+    font-size: 26px; 
+}
+.center-title{
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact,.text-slider-questions,.text-slider-product{
+        color: #FFF;
+     }
+    
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-about,.text-slider-product{
+        position: absolute;
+        bottom: 5px;
+        left: 5px;
+        right: auto;
+    }
+    .text-slider-quality,.text-slider-questions,.text-slider-contact{
+        position: absolute;
+        bottom: 10px;
+        left: auto;
+        right: 5px;
+    }
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact{
+        font-size: 36px; 
+    }
+    .text-slider-questions,.text-slider-product{
+        font-size: 36px; 
+    }
+    .text-slider-questions{width: 350px}
+    .text-slider-returnpolicies{width: 350px}
+    .text-slider-quality{width: 400px}
+    .center-title{
+        text-align: unset;
+    }
+    
+}
+@media only screen and (min-width: 992px) {
+
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact,.text-slider-questions,.text-slider-product{
+        color: #FFF;
+     }
+
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-about,.text-slider-product{
+        position: absolute;
+        bottom: 10px;
+        left: 30px;
+    }
+    .text-slider-quality,.text-slider-questions,.text-slider-contact{
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+    }
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact{
+        font-size: 46px; 
+    }
+    .text-slider-questions,.text-slider-product{
+        font-size: 40px; 
+    }
+    .text-slider-delivery,.text-slider-about,.text-slider-contact,.text-slider-product{width: 500px}
+    .text-slider-questions{width: 350px}
+    .text-slider-returnpolicies{width: 350px}
+    .text-slider-quality{width: 400px}
+    
+}
+@media only screen and (min-width: 1200px) {
+
+    .text-slider-delivery,.text-slider-returnpolicies,.text-slider-quality,.text-slider-about,.text-slider-contact,.text-slider-product{
+        font-size: 55px;
+    }
+    .text-slider-questions{ font-size: 48px;}
+    .text-slider-delivery,.text-slider-about,.text-slider-contact,.text-slider-product{width: 500px}
+    .text-slider-questions{width: 400px}
+    .text-slider-returnpolicies{width: 450px}
+    .text-slider-quality{width: 450px}
+    
+} */
+
+
+/* custom :default */
+
+.text-slider-delivery, .text-slider-returnpolicies,.text-slider-about,.text-slider-product{
+    position: absolute;
+    color: #fff;
+    text-align: left !important;
+}
+.text-slider-quality,.text-slider-questions,.text-slider-contact{
+    position: absolute;
+    color: #fff;
+    text-align: right !important;
+}
+/* Fonts Size */
+.text-slider-delivery{
+    font-size: 17px;
+    width: 160px;
+    bottom: 3px;
+    left: 5px;
+}
+.text-slider-returnpolicies{
+    font-size: 15px;
+    width: 130px;
+    bottom: 3px;
+    left: 5px;
+}
+.text-slider-quality{
+    font-size: 15px;
+    width: 130px;
+    bottom: 5px;
+    right: 5px;
+}
+.text-slider-questions{
+    font-size: 15px;
+    width: 140px;
+    bottom: 5px;
+    right: 5px;
+}
+.text-slider-about{
+    font-size: 15px;
+    width: 140px;
+    bottom: 5px;
+    left: 10px;
+}
+
+.text-slider-product{
+    font-size: 15px;
+    width: 140px;
+    bottom: 5px;
+    left: 5px;
+}
+.text-slider-contact{
+    font-size: 15px;
+    width: 140px;
+    bottom: 10px;
+    right: 10px;
+}
+@media only screen and (min-width: 420px) {
+    .text-slider-delivery{
+        font-size: 22px;
+        width: 200px;
+        bottom: 3px;
+        left: 5px;
+    }
+    .text-slider-returnpolicies{
+        font-size: 20px;
+        width: 180px;
+        bottom: 5px;
+        left: 10px;
+    }
+    .text-slider-quality{
+        font-size: 18px;
+        width: 150px;
+        bottom: 5px;
+        right: 10px;
+    }
+    .text-slider-questions{
+        font-size: 18px;
+        width: 170px;
+        bottom: 5px;
+        right: 10px;
+    }
+    .text-slider-about{
+        font-size: 18px;
+        width: 170px;
+        bottom: 5px;
+        left: 10px;
+    }
+    .text-slider-product{
+        font-size: 18px;
+        width: 170px;
+        bottom: 5px;
+        left: 10px;
+    }
+    .text-slider-contact{
+        font-size: 18px;
+        width: 170px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+@media only screen and (min-width: 576px) {
+    .text-slider-delivery{
+        font-size: 30px;
+        width: 350px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-returnpolicies{
+        font-size: 24px;
+        width: 230px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-quality{
+        font-size: 22px;
+        width: 190px;
+        bottom: 5px;
+        right: 10px;
+    }
+    .text-slider-questions{
+        font-size: 22px;
+        width: 200px;
+        bottom: 10px;
+        right: 10px;
+    }
+    .text-slider-about{
+        font-size: 22px;
+        width: 200px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-product{
+        font-size: 22px;
+        width: 200px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .text-slider-contact{
+        font-size: 22px;
+        width: 200px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .text-slider-delivery{
+        font-size: 40px;
+        width: 450px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-returnpolicies{
+        font-size: 34px;
+        width: 310px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-quality{
+        font-size: 30px;
+        width: 260px;
+        bottom: 5px;
+        right: 20px;
+    }
+    .text-slider-questions{
+        font-size: 30px;
+        width: 290px;
+        bottom: 10px;
+        right: 20px;
+    }
+    .text-slider-about{
+        font-size: 30px;
+        width: 290px;
+        bottom: 10px;
+        left: 20px;
+    }
+    .text-slider-product{
+        font-size: 30px;
+        width: 290px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .text-slider-contact{
+        font-size: 30px;
+        width: 290px;
+        bottom: 10px;
+        right: 20px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .text-slider-delivery{
+        font-size: 45px;
+        width: 480px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-returnpolicies{
+        font-size: 45px;
+        width: 430px;
+        bottom: 5px;
+        left: 20px;
+    }
+    .text-slider-quality{
+        font-size: 40px;
+        width: 350px;
+        bottom: 5px;
+        right: 20px;
+    }
+    .text-slider-questions{
+        font-size: 42px;
+        width: 400px;
+        bottom: 10px;
+        right: 20px;
+    }
+    .text-slider-about{
+        font-size: 42px;
+        width: 400px;
+        bottom: 10px;
+        left: 20px;
+    }
+    .text-slider-product{
+        font-size: 45px;
+        width: 420px;
+        bottom: 10px;
+        left: 20px;
+    }
+    .text-slider-contact{
+        font-size: 45px;
+        width: 390px;
+        bottom: 10px;
+        right: 20px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .text-slider-delivery{
+        font-size: 45px;
+        width: 480px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .text-slider-returnpolicies{
+        font-size: 45px;
+        width: 390px;
+        bottom: 20px;
+        left: 20px;
+    }
+    .text-slider-quality{
+        font-size: 45px;
+        width: 390px;
+        bottom: 10px;
+        right: 20px;
+    }
+    .text-slider-questions{
+        font-size: 45px;
+        width: 420px;
+        bottom: 10px;
+        right: 20px;
+    }
+    .text-slider-about{
+        font-size: 45px;
+        width: 420px;
+        bottom: 10px;
+        left: 20px;
+    }
+    .text-slider-product{
+        font-size: 45px;
+        width: 420px;
+        bottom: 10px;
+        left: 20px;
+    }
+    .text-slider-contact{
+        font-size: 45px;
+        width: 390px;
+        bottom: 10px;
+        right: 20px;
+    }
+}

@@ -1,0 +1,62 @@
+.radio-style:checked + .radio-style-3-label:before {
+    color: #fff;
+    background-color: #44bd32;
+}
+
+.btn-paypal{
+    background: transparent;
+    border: none;
+}
+.btn-sand-mail{
+    margin: 0px !important;
+}
+@media only screen and (max-width: 575px) {
+    .btn-sand-mail{
+        font-size: 12px !important;
+        padding: 0px !important;
+    }
+}
+@media only screen and (max-width: 575px) {
+    .btn-shopping-cart{
+        width: 100% !important;
+        margin-bottom: 10px !important;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .cart-product-name img {
+        max-width: unset;
+    }
+
+}
+
+.grid-show-bank{
+    display: grid;
+    grid-template-columns: auto;
+}
+.grid-redio-show-bank-detail{
+    margin-left: 75px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-gap: 5px;
+}
+.grid-col-two-compre{
+    display: grid;
+    grid-template-columns: auto;
+}
+.btn-remove-compre, .btn-dowload-compre, .btn-email-compre{
+    width: 98% !important;
+}
+#loadding-img img{
+    width: 150px !important;
+}
+@media only screen and (min-width: 768px) {
+    .grid-col-two-compre{
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+
+    .btn-remove-compre{width: 200px !important;}
+    .btn-dowload-compre{width: 170px !important;}
+    .btn-email-compre{width: 140px !important;}
+}

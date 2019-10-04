@@ -1,0 +1,222 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+
+#header, #header-wrap, #logo img{
+  height: auto !important;
+}
+#header.sticky-style-2{
+  height: auto;
+}
+#primary-menu.style-2{
+  background-color: #f7941d;
+}
+#primary-menu ul li > a{
+  padding: 39px 13px;
+}
+#primary-menu ul li:hover > a{
+  background-color: #726658;
+  color: #FFF;
+}
+#page-title{
+  padding: 20px 0px;
+}
+.sfHover{
+  background-color: #726658;
+  color: #FFF !important;
+}
+.hbanner{
+  float: right;
+}
+.hbanner img{
+ margin-left: 25px;
+}
+.hbanner .img1{
+ width: 60%;
+}
+.hbanner .img2{
+ width: 90%;
+}
+
+.post-grid.grid-3 .entry{
+  width: 250px;
+}
+.licon{
+  margin-bottom: 30px;
+}
+#footer{
+  background-color: #FFF;
+}
+#footer h4{
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+#copyrights{
+  border-top: 1px solid rgba(0,0,0,.2);
+  background-color: #FFF;
+  padding: 20px 0px;
+  font-size: 14px;
+}
+.swiper_wrapper{
+  height: 320px;
+}
+.grid-container{
+  overflow: unset;
+}
+.boximggallery{
+  width: 250px;
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  padding: 3px;
+}
+.swiperText-slide{
+  height: auto;
+  font-size: 14px;
+  margin-bottom: 10px !important;
+}
+.iconsi{
+  z-index: 999;
+}
+.si-facebook-ac{
+  color: #fff;
+  background-color: #3B5998 !important;
+  border: 1px solid #3B5998;
+}
+.si-twitter-ac{
+  color: #fff;
+  background-color: #00ACEE !important;
+  border: 1px solid #00ACEE;
+}
+.si-youtube-ac{
+  color: #fff;
+  background-color: #C4302B !important;
+  border: 1px solid #C4302B;
+}
+.si-gplus-ac{
+  color: #fff;
+  background-color: #DD4B39 !important;
+  border: 1px solid #DD4B39;
+}
+.si-instagram-ac{
+  color: #fff;
+  background-color: #3F729B !important;
+  border: 1px solid #3F729B;
+}
+.si-email3-ac{
+  color: #fff;
+  background-color: #6567A5 !important;
+  border: 1px solid #6567A5;
+}
+.single-post .entry-image img{
+  width: auto;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+@media (max-width: 1024px){
+  #primary-menu ul li>a{
+    font-size: 10px;
+  }
+  #primary-menu ul li > a{
+        padding: 39px 10px;
+  }
+  h3{
+    font-size: 22px;
+  }
+  .swiper_wrapper {
+      height: 380px;
+  }
+  .hbanner img{
+   margin-left: 10px;
+  }
+}
+@media (max-width: 991px){
+  #primary-menu ul li>a{
+    color: #FFF;
+  }
+  #primary-menu ul ul li > a{
+    color: #FFF;
+  }
+  body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu ul ul a,
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li:hover ul a,
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > ul > li.current ul a,
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li:hover ul a,
+	body:not(.dark) #header:not(.dark) #header-wrap:not(.dark) #primary-menu > div > ul > li.current ul a  { color: #FFF !important; }
+}
+@media (max-width: 479px) {
+  #top-bar .col_full{
+    margin-bottom: 0px !important;
+  }
+  .hbanner{
+    text-align: center;
+    float: none;
+  }
+  .hbanner .img1{
+    display: none;
+  }
+}
+
+/*--------------------------------------- update 24/01/2019 */
+#primary-menu ul li>a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 900;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+  font-weight: bold;
+  line-height: 1.5;
+  margin: 0 0 30px 0;
+  font-family: 'Raleway', sans-serif;
+}
+
+.swiperText-slide {
+  font-size: 90%;
+  color: #777777;
+  line-height: 1.5;
+  font-family: 'Lato', sans-serif;
+}
+.more-link {
+  font-style: normal;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pager li > a, .pager li > span {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 800;
+}
+.post-grid.grid-3 .entry-title h2 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Lato', sans-serif;
+}
+.leftmargin-sm {
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
+  color: #555;
+}
+
+#page-title h1 {
+  font-size: 20px;
+  font-weight: bold;
+}

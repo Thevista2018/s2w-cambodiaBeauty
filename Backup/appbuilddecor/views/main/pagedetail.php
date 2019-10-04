@@ -1,0 +1,47 @@
+<?PHP
+  if(count($listdata) != 0){
+    foreach ($listdata as $key => $value) {
+      $Title = $value['con_page_th'];
+      $Decision = $value['con_decision_th'];
+      $Detail = $value['con_detail_th'];
+    }
+  }
+?>
+<!-- Page Title
+============================================= -->
+<section id="page-title">
+
+  <div class="container clearfix">
+    <h1><?=$Title;?></h1>
+    <span><?=$Decision;?></span>
+    <ol class="breadcrumb">
+      <li><a href="#">Home</a></li>
+      <li class="active"><?=$Title;?></li>
+    </ol>
+  </div>
+
+</section><!-- #page-title end -->
+<!-- Site Content
+============================================= -->
+<section id="content">
+
+  <div class="content-wrap notoppadding topmargin-sm">
+
+    <div class="container clearfix nobottommargin">
+        <div class="col_one_fourth">
+          <?=$this->banner->show();?>
+        </div>
+
+        <div class="col_three_fourth col_last">
+          <!-- <div class="fancy-title title-bottom-border">
+            <h3>News & Publicities</h3>
+          </div> -->
+          <?=$Detail;?>
+
+        </div>
+
+    </div>
+
+  </div>
+
+</section>

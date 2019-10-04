@@ -1,0 +1,42 @@
+/* ////////////////////////////////////////////////////// Css Reset ////////////////////////////////////////////////////// */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; outline:0; font:12px Tahoma, Sans-Serif; }
+:focus { outline:0; }
+body { line-height:1px; color:black; background:#eff0f2; }
+ol, ul { list-style:none; }
+table { border-collapse:separate; }
+img { border:none; }
+caption, th, td { font-weight:normal; }
+blockquote:before, blockquote:after,
+q:before, q:after { content: “”; }
+blockquote, q { quotes: “” “”; }
+body,p,td,th,ul,li { color:#000; font:12px Tahoma, Sans-Serif; line-height:15px; padding:0; margin:0; }
+.clearspace { clear:both; }
+/* ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+/* ////////////////////////////////////////////////////// Link มาตรฐาน ////////////////////////////////////////////////////// */
+a { font:12px Tahoma; color:black; text-decoration:none; }
+a:hover { font:12px Tahoma; color:black; text-decoration:underline; }
+
+/* ////////////////////////////////////////////////////// Background ////////////////////////////////////////////////////// */
+body { background:black; }
+
+/* ////////////////////////////////////////////////////// แก้ PNG สำหรับ IE6 ////////////////////////////////////////////////////// */
+.pngfix, img { behavior: url("../../admin/iepngfix/iepngfix.htc"); }
+/*สำหรับ Host .pngfix, img { behavior: url("/iepngfix/iepngfix.htc"); }
+
+/* ////////////////////////////////////////////////////// ควบคุมความกว้างหน้าเว็บทั้งหมด ////////////////////////////////////////////////////// */
+#login_box { position:relative; margin:120px auto 5px auto; width:228px; height:124px; background:url("../../images/admin/login_bg.jpg") no-repeat; }
+
+#input_box_user { float:left; padding:53px 0 0 65px; }
+#input_box_pass { float:left; padding:4px 0 0 65px; }
+
+#button_login { float:left; margin:-20px 0 0 4px; }
+
+input.txt { border:1px solid #dbdbda; background:#fff; color:#26587e; width:97px; height:16px; }

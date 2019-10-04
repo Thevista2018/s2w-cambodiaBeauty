@@ -1,0 +1,126 @@
+/* ///////////////// General ///////////////// */
+.pad-top-10 { padding-top:10px; }
+.pad-left-10 { padding-left:10px; }
+.pad-left-20 { padding-left:20px; }
+.pad-right-10 { padding-right:10px; }
+.pad-right-20 { padding-right:20px; }
+.pad-bottom-5 { padding-bottom:5px; }
+
+/* thumb */
+.thumb { padding:2px; }
+
+/* cursor */
+.cursor { cursor:pointer; }
+
+/* font color */
+.red-level-2 { color:#790000; }
+.orange-level-2 { color:#a87e00; }
+
+/* special */
+.line-detail { height:17px; }
+.topic { float:left; width:70px; font:bold 11px tahoma; color:black; text-align:right; }
+.topic_2 { float:left; width:100px; font:bold 11px tahoma; color:black; text-align:right; }
+.user_code { float:left; font:bold 11px tahoma; color:#790000; }
+.user_default { float:left; font:11px tahoma; color:#5e5e5e; }
+.colon { float:left; padding:0 10px; }
+
+.line { width:92%; height:1px; border-bottom:1px dashed #ccc; margin:5px auto 7px auto; }
+
+/* ///////////////// td - manage ///////////////// */
+img.update { cursor:pointer; vertical-align:top; padding-top:2px; }
+
+.detail { line-height:16px; }
+/*.link { padding-left:35px; background:url("images/icons/link.png") no-repeat left center; }*/
+a.link { float:left; font:11px tahoma; color:#a87e00; }
+a.link:hover { float:left; font:11px tahoma; color:#a87e00; text-decoration:underline; }
+.post_date { font:10px tahoma; color:blueviolet; line-height:14px; margin-top:3px; }
+
+/* ///////////////// Description ///////////////// */
+#table_description { width:960px; margin:0 auto; border-bottom:1px dotted #616161; padding-bottom:5px; }
+#table_description h1 { font:bold 14px tahoma; color:#0073ea; margin-bottom:1px; }
+#table_description p { font:11px tahoma; color:#b9b9b9; }
+
+/* ///////////////// table ///////////////// */
+/*.tb_style1 { margin:0px auto 0 auto; }*/
+.tb_style1 { margin:0 auto; }
+
+/* ///////////////// thead ///////////////// */
+.tb_style1 thead { background:#dfdfdf; }
+.tb_style1 thead th { 
+    height:40px; 
+    border-top:1px solid black; 
+    border:1px solid black;
+    vertical-align:middle;
+}
+.tb_style1 thead span { font:bold 12px tahoma; color:black; }
+.tb_style1 .border-right { border-right:1px solid white; }
+
+/* ///////////////// tbody ///////////////// */
+/* JQuery : zebra row */
+.tb_style1 tbody tr.alt td { background:#f9f9f9; }
+.tb_style1 tbody tr td { background:#f1f1f1; }
+.tb_style1 tbody tr.over td { background:#fcf8cf; }
+
+.tb_style1 tbody td { 
+    text-align:center;
+    vertical-align:top;
+    vertical-align:middle;
+    border-bottom:1px solid white;
+    font:12px tahoma;
+    color:#616161;
+}
+.tb_style1 .no-edit { font:bold 11px tahoma; color:red; }
+
+/* ///////////////// td - manage ///////////////// */
+.icon_box { width:62px; margin:0 auto; border-bottom:1px dashed #ccc; padding:4px 0 5px 2px; text-align:left }
+a.lock, a:hover.lock { 
+    padding-left:22px; 
+    background:url("../../images/admin/icons/lock_close.png") no-repeat left center; 
+    font:12px tahoma; 
+    color:#606060; 
+    height:16px; 
+    line-height:16px; 
+    display: block;
+}
+a.unlock, a:hover.unlock { 
+    padding-left:22px; 
+    background:url("../../images/admin/icons/lock_open.png") no-repeat left center; 
+    font:12px tahoma; 
+    color:#606060; 
+    height:16px; 
+    line-height:16px; 
+    display: block;
+}
+a.edit, a:hover.edit { 
+    padding-left:22px; 
+    background:url("../../images/admin/icons/edit.png") no-repeat left center; 
+    font:12px tahoma; 
+    color:#227900; 
+    height:16px; 
+    line-height:16px; 
+    display: block;
+}
+a.del, a:hover.del { 
+    padding-left:22px; 
+    background:url("../../images/admin/icons/del.png") no-repeat left center; 
+    font:12px tahoma; 
+    color:#e60031; 
+    height:16px; 
+    line-height:16px; 
+    display: block;
+}
+span.del, span:hover.del { 
+    padding-left:22px; 
+    background:url("../../images/admin/icons/del.png") no-repeat left center; 
+    font:12px tahoma; 
+    color:#e60031; 
+    height:16px; 
+    line-height:16px; 
+    display: block;
+}
+
+.pipe-date { font:11px tahoma; color:#ccc; text-shadow:1px 1px 0 #f2f2f2; }
+
+/* ///////////////// No Content ///////////////// */
+#no_content_area { width:958px; margin:0 auto; background:black; text-align:center; padding:15px 0; margin-top:15px; }
+#no_content_area span { font:bold 16px tahoma; color:yellow; }

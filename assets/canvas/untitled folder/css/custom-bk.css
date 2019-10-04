@@ -1,0 +1,279 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+p { margin-bottom: 15px; }
+
+/* ---------------------------------------------------------------
+template css 
+-----------------------------------------------------------------*/
+#top-language { border-bottom: #ccc 1px solid; text-align: center;padding: 10px 0;}
+#topsearch { margin: 5px 0 20px; }
+#topsearch .col-md-2 { padding-right: 0;padding-left: 0; }
+#topsearch .emtry { color: #fff;}
+#topsearch .boxinput { width: 85%;float: left;}
+#topsearch .iconcart { width: 15%;float: left;text-align: center !important;}
+#topsearch i { font-size:22px; }
+#topsearch .badge {
+	position: absolute;
+	font-size: 10px;
+	background: #ff0000;
+	color: #fff;
+	vertical-align: top;
+	margin-left: -10px; 
+}
+#primary-menu.style-2 { max-width: none; border-top: none; }
+#primary-menu ul li > a { font-weight: 400; font-size: 16px; }
+#footer { margin-top: 0 !important;background-color: #FFF; }
+#footer .footer-widgets-wrap { padding: 60px 0; }
+#footer h4 { margin: 0 0 5px; }
+#footer p { margin-bottom: 0 !important; }
+#footer .footer-logo { width: 80%;display: -webkit-inline-box;margin-bottom: 0; }
+#footer .addline { width: 50%}
+#copyrights {
+    padding: 20px 0;
+	background-color: #ecf0f1 !important;
+	color: #444444 !important;
+}
+#copyrights .col_full{
+	margin-bottom: 0 !important;
+}
+/* other */
+#page-title {
+	position: relative;
+    padding: 30px 0;
+    background-color: #FFF;
+	border-bottom: none;
+	overflow: hidden;
+}
+.breadcrumb {
+	font-size: 14px;
+	left: 0px !important;
+}
+.breadcrumb .active {
+	font-weight: bold;
+	color: #707070;
+	
+}
+.line, .double-line {
+    margin: 10px 0 15px 0;
+}
+#fromdetail p {
+	line-height: 2.5 !important;
+	font-size: 14px;
+}
+#content.detailproduct .entry {
+	border-bottom: none;
+	margin-bottom: 10px;
+}
+#slider {
+	height: unset !important;
+}
+
+/* responsive css */
+@media (min-width: 576px) {
+	#footer .addline { width: 40%}
+	#footer h4 { font-size: 16px; }
+	#footer p { font-size: 16px; }
+}
+@media (min-width: 768px) {
+	#top-language .boxlanguage { 
+		width: 10%; 
+		border-left: #ccc 1px solid;
+		text-align: center;
+		float: right;
+	}
+	#topsearch.container-fluid { padding-left: 0;padding-right: 0;}
+	#topsearch .emtry { width: 70%;float: left;}
+	#topsearch .boxinput { width: 20%;}
+	#topsearch .iconcart { width: 10%;}
+	#primary-menu.style-2 > div > ul > li > a {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin-top: 15px;
+	}
+	#primary-menu ul li > a:hover, #primary-menu ul li > a:focus {
+		border: #000 1px solid;
+		border-radius: 25px;
+		color: #000;
+	}
+	#primary-menu ul li .mega-menu-content{
+		border-top: 2px solid #707070;
+		width: 180px;
+	}
+	#primary-menu ul li .mega-menu-content li > a:hover { 
+		color: #000;
+		border: none;
+		border-radius: 0;
+		background-color: #ccc;
+	}
+	#bgbanner { margin-top: 15px; }
+	#footer .col-md-3 { width: 25%; float: left; }
+	#footer .col-md-5 { width: 41.66666667%; float: left;}
+	#footer .col-md-4 { width: 33.33333333%; float: left;}
+	#footer .addline { width: 50%; } 
+	#footer h4 { font-size: 14px; }
+	#footer p { font-size: 11px; }
+	
+}
+@media (min-width: 992px) {
+	#primary-menu {
+		float: none;
+	}
+	#primary-menu.style-2 > div > ul {
+		float: unset;
+		display: flex;
+		justify-content: center;
+	}
+	#primary-menu ul li > a {font-size: 12px;}
+	#footer p { font-size: 14px;}
+}
+@media (min-width: 1200px) {
+	#primary-menu ul li > a {font-size: 16px;}
+	#footer .addline { width: 40%}
+}
+@media (min-width: 1440px) {
+	#footer img { width: 75%;}
+	#footer h4 { font-size: 18px; }
+	#footer p { font-size: 14px; }
+}
+
+/* ---------------------------------------------------------------
+page home css 
+-----------------------------------------------------------------*/
+#whyus .col_full { text-align: center;margin-bottom: 20px !important; }
+#whyus h2 { margin:15px 0; }
+
+#retail .col_full { text-align: center; }
+#retail { background-color: #efefef; padding: 15px 0; }
+#retail .col-md-4 { text-align: center; padding: 0 30px; }
+#retail img { width: 50%;}
+#retail h4 { margin:15px 0 5px; }
+#design h4 { margin:15px 0 5px; }
+#service { padding: 15px 0;background-color: #888888;}
+#service .col_full { text-align: center; }
+#service .portfolio-image { text-align: center; }
+#service .col-md-2 { margin-bottom:15px }
+#service img { min-width: 50%; max-width: 35%; margin-bottom: 5px;margin-left: 25%; }
+#service h2 { margin:15px 0 25px; }
+#service h3 { color: #ffffff; font-size: 16px; margin-bottom:0 !important; }
+
+/* responsive css */
+@media (min-width: 420px) {
+	#retail .col_full h4 { font-size: 20px; }
+	#retail .col-md-4 p { font-size: 18px; }
+	#service h3 { font-size: 18px; }
+}
+@media (min-width: 576px) {
+	#retail .col-md-4 h4 { font-size: 18px; }
+	#retail p { font-size: 18px; }
+	#service h3 { font-size: 24px; }
+	#whyus .col-md-6.textwhyus { text-align: justify;}
+}
+@media (min-width: 768px) {
+	#whyus .col-md-6 { width: 50%; float: left;}
+	#whyus .col-md-6.textwhyus { padding-top: 15px;}
+	#retail .col-md-4 { width: 33.33333333%; float: left;text-align: left;}
+	#retail .col-md-4 h4 { font-size: 12px;font-weight: bold; }
+	#retail .col-md-4 p { font-size: 12px; }
+	#design .col-md-4 { width: 33.33333333%; float: left;}
+	#design .col-md-4.textdesign h4 { font-size: 14px;text-align: center;}
+	#design .col-md-4.textdesign p { font-size: 10px;}
+	#design .col-md-4.imgdesign { padding: 0;}
+	#service .col-md-1 { width: 8.33333333%; float: left;}
+	#service .col-md-2 { width: 16.66666667%; float: left;}
+	#service img { max-width: 60%; margin-bottom: 5px;margin-left: 20%; }
+	#service h2 { font-size: 18px; }
+	#service h3 { font-size: 14px; }
+}
+@media (min-width: 992px) {
+	#whyus .col-md-6.textwhyus { font-size: 16px;}
+	#retail .col_full h4 { font-size: 20px; }
+	#retail .col-md-4 h4 { font-size: 16px; }
+	#retail .col-md-4 p { font-size: 14px; }
+	#design .col-md-4.textdesign h4 { font-size: 16px;}
+	#design .col-md-4.textdesign p { font-size: 14px;}
+	#service h2 { font-size: 24px; }
+	#service h3 { font-size: 16px; }
+}
+@media (min-width: 1200px) {
+	#whyus .col-md-6.textwhyus { font-size: 18px;font-weight: 300}
+	#whyus img  { max-width: 75%;}
+	#retail .col_full h4 { font-size: 24px; }
+	#retail .col-md-4 h4 { font-size: 18px; }
+	#retail .col-md-4 p { font-size: 16px; font-weight: 300; }
+	#design .col-md-4.textdesign { padding-top: 50px;}
+	#design .col-md-4.textdesign h4 { font-size: 18px;}
+	#design .col-md-4.textdesign p { font-size: 16px;font-weight: 300;}
+	#service { padding-top: 30px;}
+	#service img { max-width: 80%; margin-bottom: 10px; }
+	#service h2 { font-size: 26px; }
+	#service h3 { font-size: 18px; }
+}
+@media (min-width: 1440px) {
+	#whyus .col-md-6.textwhyus { font-size: 22px; }
+	#whyus img  { max-width: 65%;}
+	#retail .col-md-4 p { font-size: 18px; font-weight: 400;}
+	#design .col-md-4.textdesign h4 { font-size: 20px;}
+	#design .col-md-4.textdesign p { font-size: 18px;font-weight: 300;}
+	#service h2 { font-size: 36px; }
+	#service h3 { font-size: 22px; }
+	#service img { max-width: 60%; margin-bottom: 15px; }
+}
+
+/* ---------------------------------------------------------------
+page product css 
+-----------------------------------------------------------------*/
+.widget_links li a {
+	font-size: 16px;
+	background: none;
+}
+
+/* ---------------------------------------------------------------
+page product css 
+-----------------------------------------------------------------*/
+#underabout { background-color: #ffffff; }
+#underabout h1 {
+	font-weight: 900;
+	margin: 0 0 0 0;
+	font-size:48px;
+}
+#underabout .counter {
+	font-size:48px;
+	font-weight: 900;
+	margin: 0 0 0 0;
+}
+
+@media (min-width: 768px) {
+	#underabout .col-md-3 {
+		width: 25%;
+		float: left;
+	}
+	#underabout h1 {font-size:36px; margin-top: 40%;}
+	#underabout .counter {font-size:36px; margin-top: 40%;}
+}
+@media (min-width: 992px) {
+	#underabout h1 {font-size:38px; margin-top: 45%;}
+	#underabout .counter {font-size:38px; margin-top: 45%;}
+}
+@media (min-width: 1200px) {
+	#underabout h1 {font-size:44px; margin-top: 40%;}
+	#underabout .counter {font-size:44px; margin-top: 40%;}
+}
+@media (min-width: 1440px) {
+	#underabout h1 {font-size:62px; margin-top: 45%;}
+	#underabout .counter {font-size:62px; margin-top: 45%;}
+}
+
+#customers img {
+	transition: transform .2s;
+}
+#customers img:hover {
+	transform: scale(1.5); 
+}
+
+
+
+

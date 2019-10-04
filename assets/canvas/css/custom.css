@@ -1,0 +1,55 @@
+/* ----------------------------------------------------------------
+	Custom CSS
+
+	Add all your Custom Styled CSS here for New Styles or
+	Overwriting Default Theme Styles for Better Hanlding Updates
+-----------------------------------------------------------------*/
+
+
+
+/* ===============================  footer =============================== */
+#copyrights {
+	padding: 20px 0 !important;
+}
+#footer .footer-widgets-wrap {
+    position: relative;
+    padding: 40px 0 !important;
+}
+@media only screen and (min-width: 768px) {
+	.grid-footer-two{
+		display: grid;
+		grid-template-columns: auto ;
+		grid-gap: 40px;
+	}
+	.grid-footer-two-detail{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 30px;
+	}
+	.max-width-footer{
+		max-width: 500px;
+	}
+	.margin-top-footer-img{
+		margin-top: 15px;
+		text-align: center;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.grid-footer-two{
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-gap: 40px;
+	}
+	.grid-footer-two-detail{
+		display: grid;
+		grid-template-columns: auto 33%;
+		grid-gap: 30px;
+	}
+	.max-width-footer{
+		max-width: 350px;
+	}
+	.margin-top-footer-img{
+		margin-top: 15px;
+		text-align: left;
+	}
+}
