@@ -144,11 +144,19 @@
 
 				<!-- Logo
 				============================================= -->
-				<div id="logo" class="divcenter">
-					<a href="<?=base_url();?>" class="standard-logo" data-dark-logo="images/logo-dark.png"><img class="divcenter" src="images/logo.png" alt="Canvas Logo"></a>
-					<a href="<?=base_url();?>" class="retina-logo" data-dark-logo="images/logo-dark@2x.png"><img class="divcenter" src="images/logo@2x.png" alt="Canvas Logo"></a>
-                </div>
+				
                 <!-- #logo end -->
+                <div class="display-grid-three-head-bar">
+                    <div id="logo">
+                        <a href="<?=base_url();?>" class="standard-logo" data-dark-logo="<?=base_url('uploads/logo/'.$Text_logo);?>"><img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="Canvas Logo"></a>
+                        <a href="<?=base_url();?>" class="retina-logo" data-dark-logo="<?=base_url('uploads/logo/'.$Text_logo);?>"><img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="Canvas Logo"></a>
+                    </div>
+                    <div></div>
+                    <div class="display-grid-two-head-bar">
+                        <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Visitor.png');?>"/><small>Visitor Registration</small></div>
+                        <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Exhibitor.png');?>"/><small>Online Exhibitor Manual</small></div>
+                    </div>
+                </div>
 
 			</div>
 

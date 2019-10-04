@@ -5,8 +5,36 @@
 	Overwriting Default Theme Styles for Better Hanlding Updates
 -----------------------------------------------------------------*/
 
-
-
+/* ===============================  head bar =============================== */
+.grid-one-page{
+	display: grid;
+	grid-template-columns: auto;
+}
+.display-grid-two-head-bar{
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+}
+.display-grid-three-head-bar{
+	display: grid;
+	grid-template-columns: auto;
+	grid-gap: 10px;
+}
+@media only screen and (min-width: 992px) {
+	.display-grid-two-head-bar{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
+	}
+	.display-grid-three-head-bar{
+		display: grid;
+		grid-template-columns: auto auto auto;
+		grid-gap: 10px;
+	}
+	#logo{
+		text-align: left;
+	}
+}
 /* ===============================  footer =============================== */
 #copyrights {
 	padding: 20px 0 !important;

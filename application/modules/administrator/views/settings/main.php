@@ -13,6 +13,11 @@
       $Text_Mobilephon      = $value['set_mobilecompany'];
       $Text_Fax             = $value['set_faxcompany'];
 
+      $Text_date_event      = $value['set_date_event'];
+      $Text_detail_event    = $value['set_detail_event'];
+      $Text_time_event      = $value['set_time_event'];
+      $Text_place_event     = $value['set_place_event'];
+
     }
   }
 ?>
@@ -57,6 +62,33 @@
                 <div style="margin-top: 20px;"></div>
                 <p><input type="file" name="Fild_Name_footer" id="Fild_Name_footer" onchange="readURL2(this);" class="form-control"/></p>
                 <p><input type="hidden" name="Fild_Name_footer_old" id="Fild_Name_footer_old" class="form-control" value="<?=$Text_logo_footer;?>"/></p>
+            </div>
+        </div>
+
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <b>Title Event</b>
+            </div>
+            <div class="ibox-content">
+                <div class="form-group">
+                    <label class="col-sm-12">Date Event</label>
+                    <div class="col-sm-12"><input type="text" name="Text_date_event" id="Text_date_event" value="<?=$Text_date_event;?>" class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label class="col-sm-12">Detail Event</label>
+                    <div class="col-sm-12"><input type="text" name="Text_detail_event" id="Text_detail_event" value="<?=$Text_detail_event;?>" class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label class="col-sm-12">Time Event</label>
+                    <div class="col-sm-12"><input type="text" name="Text_time_event" id="Text_time_event" value="<?=$Text_time_event;?>" class="form-control"></div>
+                </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <label class="col-sm-12">Place Event</label>
+                    <div class="col-sm-12"><input type="text" name="Text_place_event" id="Text_place_event" value="<?=$Text_place_event;?>" class="form-control"></div>
+                </div>
             </div>
         </div>
     </div>
