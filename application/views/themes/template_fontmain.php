@@ -37,6 +37,11 @@
             $Text_Phone_extcontact  = $value['set_phoneextcontact'];
             $Text_Mobilecontact     = $value['set_mobilecontact'];
 
+            $Text_date_event        = $value['set_date_event'];
+            $Text_detail_event      = $value['set_detail_event'];
+            $Text_time_event        = $value['set_time_event'];
+            $Text_place_event       = $value['set_place_event'];
+
         }
     }
 
@@ -151,7 +156,13 @@
                         <a href="<?=base_url();?>" class="standard-logo" data-dark-logo="<?=base_url('uploads/logo/'.$Text_logo);?>"><img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="Canvas Logo"></a>
                         <a href="<?=base_url();?>" class="retina-logo" data-dark-logo="<?=base_url('uploads/logo/'.$Text_logo);?>"><img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="Canvas Logo"></a>
                     </div>
-                    <div></div>
+                    <div class="grid-one-page" style="text-align:center;">
+                        <div class="font-size-head-tpb" style="color: #000000;"><?=$Text_date_event;?></div>
+                        <div class="font-size-subhead-tpb" style="color: #43C5D5;"><?=$Text_detail_event;?></div>
+                        <div style="color: #606060;"><?=$Text_time_event;?></div>
+                        <div style="color: #000000;"><?=$Text_place_event;?></div>
+                        
+                    </div>
                     <div class="display-grid-two-head-bar">
                         <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Visitor.png');?>"/><small>Visitor Registration</small></div>
                         <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Exhibitor.png');?>"/><small>Online Exhibitor Manual</small></div>
