@@ -1,23 +1,45 @@
-/* ----------------------------------------------------------------
-	Custom CSS
 
-	Add all your Custom Styled CSS here for New Styles or
-	Overwriting Default Theme Styles for Better Hanlding Updates
------------------------------------------------------------------*/
-
+body{
+    font-family: 'HelveticaNeue' !important;
+}
 /* ===============================  font size  =============================== */
 
 .font-size-head-tpb{
-	font-size: 24px;
+	font-size: 34px;
 	font-weight: 800px;
+	font-weight: bold;
 }
 .font-size-subhead-tpb{
 	font-size: 16px;
-	font-weight: 800px;
+	font-weight: bold;
+}
+
+/* ===============================  color =============================== */
+.border-color-blue{
+	height: 2px;
+	background: #4ED1DA !important;
+}
+.color-blue{
+	color: #4ED1DA !important;
+}
+.color-black{
+	color: #000 !important;
+}
+.bg-dark{
+	background: #000 !important;
+	color: #FFF !important;
+}
+/* ===============================  other =============================== */
+.text-right{
+	text-align: right !important;
 }
 
 /* ===============================  head bar =============================== */
 .grid-one-page{
+	display: grid;
+	grid-template-columns: auto;
+}
+.grid-one-page-head{
 	display: grid;
 	grid-template-columns: auto;
 }
@@ -45,6 +67,30 @@
 	#logo{
 		text-align: left;
 	}
+
+}
+/* ===============================  navbar =============================== */
+#header.sticky-style-2 {
+    height: 184px !important;
+}
+#primary-menu ul li.current > a {
+    color: #bdc3c7;
+}
+#primary-menu ul li > a {
+    color: #FFF;
+}
+#primary-menu ul li > a:hover {
+    color: #ecf0f1;
+}
+/* ===============================  menu left =============================== */
+.border-color-menuLeft{
+	border: 1px solid #ecf0f1;
+}
+.widget > h4 {
+    margin-bottom: 15px !important;
+}
+.margin-Top-wedget{
+    margin-top: 30px !important;
 }
 /* ===============================  footer =============================== */
 #copyrights {

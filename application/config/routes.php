@@ -49,22 +49,33 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['home'] = 'main/index';
-$route['news'] = 'news/index/allnews';
-$route['news_press'] = 'news/release/news';
-$route['newscontent/(:num)'] = 'news/newsdetail/news/$1';
-$route['publicitie'] = 'news/release/publicities';
-$route['publicitiescontent/(:num)'] = 'news/newsdetail/publicities/$1';
-
-$route['seminar'] = 'news/index/allseminar';
-$route['seminar_conference'] = 'news/release/seminar_conference';
-$route['seminarscontent/(:num)'] = 'news/newsdetail/seminar/$1';
-$route['special_activity'] = 'news/release/special_activity';
-$route['activitycontent/(:num)'] = 'news/newsdetail/activity/$1';
-
 
 
 $route['default_controller'] = 'main/index';
+
+require_once( BASEPATH .'database/DB'. EXT );
+$db =& DB();
+$query = $db->select('con_id, con_page_th, con_page_en');
+$query = $db->get('tb_contents');
+$result = $query->result();
+foreach( $result as $row ){
+  if(!empty($row->con_page_th)){
+    $route[str_replace("&","",str_replace(" ","",strtolower($row->con_page_th)))] = "main/pageDetail/".$row->con_id;
+  }else if(!empty($row->con_page_en)){
+    $route[str_replace("&","",str_replace(" ","",strtolower($row->con_page_en)))] = "main/pageDetail/".$row->con_id;
+  }
+}
+
+$query = $db->select('consub_id, consub_page_th, consub_page_en');
+$query = $db->get('tb_subcontents');
+$result = $query->result();
+foreach( $result as $row ){
+  if(!empty($row->consub_page_th)){
+    $route[str_replace(" ","",strtolower($row->consub_page_th))] = "main/pagesubDetail/".$row->consub_id;
+  }else if(!empty($row->consub_page_en)){
+    $route[str_replace(" ","",strtolower($row->consub_page_en))] = "main/pagesubDetail/".$row->consub_id;
+  }
+}
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;

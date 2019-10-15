@@ -1,5 +1,12 @@
 <?PHP
 
+    // Main Manu
+    $this->db->select("*");
+    $this->db->where(array('con_show' => 1, 'con_status' => 1));
+    $this->db->order_by('con_sort asc');
+    $query = $this->db->get('tb_contents');
+    $listmanu = $query->result_array();
+
     // settings
 	$this->db->select("*");
 	$query_settings = $this->db->get('tb_settings');
@@ -57,24 +64,18 @@
     <meta name="author" content="HookOn" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link
-        href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic"
-        rel="stylesheet" type="text/css" />
+        <!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" /> -->
+        <link rel="stylesheet" href="<?=base_url('assets/fonts/helveticaneue/stylesheet.css');?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/bootstrap.css');?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/style.css?v=003');?>" type="text/css" />
+        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/swiper.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/dark.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/font-icons.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/animate.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/magnific-popup.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/responsive.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/components/radio-checkbox.css')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom.css?v=00137')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/tabs-cart.css?v=001')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom-productdetail.css?v=0012')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom-shoppingcart.css?v=007')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom-font-page-head.css?v=001')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom-showlist-product.css?v=006')?>" type="text/css" />
-
+        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom.css?v=001')?>" type="text/css" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?=$Text_nameweb_th;?></title>
@@ -103,54 +104,41 @@
 
 <body class="stretched">
    
-    <div id="wrapper" class="clearfix" style="animation-duration: 1.5s; opacity: 1;">
-        <!-- top-bar
-        ============================================= -->
-        
-        <div id="top-bar">
-			<div class="container clearfix">
-				<div class="col_half nobottommargin">
-					<!-- Top Links
-					============================================= -->
-					<div class="top-links">
-                    </div>
-                    <!-- .top-links end -->
+    <div id="wrapper" class="clearfix">
 
-				</div>
+    <div id="top-bar">
+
+			<div class="container clearfix">
+
+				<div class="col_half nobottommargin"> </div>
 				<div class="col_half fright col_last nobottommargin">
+
 					<!-- Top Social
-                    ============================================= -->
+					============================================= -->
 					<div id="top-social">
 						<ul>
-                            <?PHP if(!empty($Text_linkfacebook)){?>
-							<li><a href="<?=$Text_linkfacebook?>" target="_bank" class="si-facebook" data-hover-width="109" style="width: 40px;"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-                            <?PHP } ?>
-                            <?PHP if(!empty($Text_linktwitter)){?>
-                            <li><a href="<?=$Text_linktwitter?>" class="si-twitter" target="_bank"  data-hover-width="95" style="width: 40px;"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
-							<?PHP } ?>
-                            <?PHP if(!empty($Text_linkgoogleplus)){?><li><a href="<?=$Text_linkinstagram?>" class="si-github" target="_bank"  data-hover-width="92" style="width: 40px;"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
-							<li><a href="<?=$Text_linkgoogleplus?>" class="si-pinterest" target="_bank"  data-hover-width="106" style="width: 40px;"><span class="ts-icon"><i class="icon-gplus"></i></span><span class="ts-text">Googleplus</span></a></li>
-							<?PHP } ?>
-                            <?PHP if(!empty($Text_linkyoutube)){?>
-                            <li><a href="<?=$Text_linkyoutube?>" class="si-instagram" target="_bank"  data-hover-width="111" style="width: 40px;"><span class="ts-icon"><i class="icon-youtube"></i></span><span class="ts-text">Youtube</span></a></li>
-                            <?PHP } ?>
-                        </ul>
+							<li><a href="#" class="si-facebook" data-hover-width="109" style="width: 40px;"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+							<li><a href="mailto:info@canvas.com" class="si-email3" data-hover-width="153" style="width: 40px;"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@canvas.com</span></a></li>
+							<li><a href="tel:+91.11.85412542" class="si-call" data-hover-width="156" style="width: 40px;"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+91.11.85412542</span></a></li>
+						</ul>
                     </div>
                     <!-- #top-social end -->
+
 				</div>
-            </div>
+
+			</div>
+
         </div>
-        <!-- #top-bar end -->
-		<!-- Header
-		============================================= -->
-		<header id="header" class="sticky-style-2">
+        
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="sticky-style-2">
 
-			<div class="container clearfix">
+            <div class="container clearfix">
 
-				<!-- Logo
-				============================================= -->
-				
-                <!-- #logo end -->
+                <!-- Logo
+                ============================================= -->
+                <div class="divcenter">
                 <div class="display-grid-three-head-bar">
                     <div id="logo">
                         <a href="<?=base_url();?>" class="standard-logo" data-dark-logo="<?=base_url('uploads/logo/'.$Text_logo);?>"><img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="Canvas Logo"></a>
@@ -161,58 +149,82 @@
                         <div class="font-size-subhead-tpb" style="color: #43C5D5;"><?=$Text_detail_event;?></div>
                         <div style="color: #606060;"><?=$Text_time_event;?></div>
                         <div style="color: #000000;"><?=$Text_place_event;?></div>
-                        
                     </div>
                     <div class="display-grid-two-head-bar">
                         <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Visitor.png');?>"/><small>Visitor Registration</small></div>
                         <div class="grid-one-page" style="text-align:center;"><img class="divcenter" width="60px" src="<?=base_url('assets/canvas/images/icon/Exhibitor.png');?>"/><small>Online Exhibitor Manual</small></div>
                     </div>
                 </div>
+                </div>
+                <!-- #logo end -->
 
-			</div>
+            </div>
 
-			<div id="header-wrap">
+            <div id="header-wrap">
 
-				<!-- Primary Navigation
-				============================================= -->
-				<nav id="primary-menu" class="style-2 center">
+                <!-- Primary Navigation
+                ============================================= -->
+                <nav id="primary-menu" class="style-2 center bg-dark">
 
-					<div class="container clearfix">
+                    <div class="container clearfix">
 
-						<div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+                        <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+                        <?PHP if(count($listmanu) != 0){?>
+                        <ul>
+                            <?PHP foreach ($listmanu as $key => $value) {?>
+                                <?php 
+                                    $con_title = $value['con_page_th'];
+                                    $con_decision = $value['con_decision_th'];
+                                    $Detail = $value['con_detail_th'];
+                                ?>
+                                <?PHP
+                                    // Sub Manu
+                                    $this->db->select("*");
+                                    $this->db->where(array('con_id' => $value['con_id'], 'consub_show' => 1, 'consub_status' => 1));
+                                    $this->db->order_by('consub_sort asc');
+                                    $query = $this->db->get('tb_subcontents');
+                                    $listsubmanu = $query->result_array();
 
-						<ul class="sf-js-enabled" style="touch-action: pan-y;">
-							<li class="current"><a href="#"><div>Home</div></a></li>
-							<li><a href="#"><div>Features</div></a></li>
-							<li><a href="#"><div>Categories</div></a></li>
-							<li><a href="#"><div>Authors</div></a></li>
-							<li><a href="#"><div>Portfolio</div></a></li>
-							<li><a href="#"><div>Blog</div></a></li>
-							<li><a href="#"><div>Contribute</div></a></li>
-							<li><a href="#"><div>Contact</div></a></li>
-						</ul>
+                                    if(!empty($value['con_url'])){
+                                        $Url = $value['con_url'];
+                                    }else{
+                                        $Url = site_url(str_replace("&","",str_replace(" ","",strtolower($value['con_page_th']))));
+                                    }
+                                ?>
+                                    <li>
+                                        <a href="<?=$Url;?>"><div><?=$con_title;?></div></a>
+                                        <?PHP if(count($listsubmanu) != 0){?>
+                                            <ul>
+                                                <?PHP
+                                                    foreach ($listsubmanu as $k => $v) {
+                                                        if(!empty($v['consub_url'])){
+                                                            $Sub_Url = $v['consub_url'];
+                                                        }else{
+                                                            $Sub_Url = site_url(str_replace("&","",str_replace(" ","",strtolower($v['consub_page_th']))));
+                                                        }
+                                                ?>
+                                                <li><a href="<?=$Sub_Url?>"><div><?=$v['consub_page_th']?></div></a></li>
+                                                <?PHP }?>
+                                            </ul>
+                                        <?PHP }?>
+                                    </li>
+                                <?PHP }?>
+                        </ul>
+                        <?PHP } ?>
 
-						<!-- Top Search
-						============================================= -->
-						<div id="top-search">
-							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-							<form action="search.html" method="get">
-								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-							</form>
-						</div><!-- #top-search end -->
+                    </div>
 
-					</div>
+                </nav>
+                <!-- #primary-menu end -->
 
-				</nav><!-- #primary-menu end -->
-
-			</div>
+            </div>
 
         </header>
         <!-- #header end -->
 
 		<!-- Content
 		============================================= -->
-		
+		<?=$contents; ?>
         <!-- #content end -->
 
 		<!-- Footer
@@ -303,11 +315,8 @@
     <script type="text/javascript" src="<?=base_url('assets/canvas/js/jquery.js')?>"></script>
     <script type="text/javascript" src="<?=base_url('assets/canvas/js/plugins.js')?>"></script>
 	<script type="text/javascript" src="<?=base_url('assets/canvas/js/functions.js?v=00128')?>"></script>
-    <script type="text/javascript" src="<?=base_url('assets/canvas/js/validate/jquery.validate.min.js')?>"></script>
-    <script type="text/javascript" src="<?=base_url('assets/canvas/js/validate/custom-valdate.js?v=0004')?>"></script>
-	
-	<!-- <script type="text/javascript" src="https://maps.google.com/maps/api/js?key=YOUR_API_KEY"></script>
-	<script type="text/javascript" src="<?=base_url('assets/canvas/js/jquery.gmap.js')?>"></script> -->
+    <!-- <script type="text/javascript" src="<?=base_url('assets/canvas/js/validate/jquery.validate.min.js')?>"></script>
+    <script type="text/javascript" src="<?=base_url('assets/canvas/js/validate/custom-valdate.js?v=0004')?>"></script> -->
 
 	<script type="text/javascript" src="<?=base_url('assets/canvas/js/jquery-lazyload/lazyload.min.js');?>"></script>
  
