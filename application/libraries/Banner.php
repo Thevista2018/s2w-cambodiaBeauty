@@ -17,9 +17,9 @@ class Banner {
 		$html = '';
 		if(count($listbanner) != 0){
 			foreach ($listbanner as $key => $value) {
-				$html.= '<div class="licon">
+				$html.= '<div class="widget margin-Top-wedget clearfix">
 				  <a href="'.$value['banner_link'].'" class="hvr-radial-out">
-				    <img src="'.base_url('uploads/banner/'.$value['banner_image']).'" alt="">
+					<img class="border-color-menuLeft" src="'.base_url('uploads/banner/'.$value['banner_image']).'" alt="">
 				  </a>
 				</div>';
 			}

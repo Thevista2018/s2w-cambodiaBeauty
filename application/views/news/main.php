@@ -3,6 +3,46 @@
     max-height: 250px;
     overflow: hidden;
   }
+  .entry {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #F5F5F5;
+  }
+  @media only screen and (min-width: 576px) {	
+    .entry-image {
+      height: 148px !important;
+    }
+
+    .entry-title {
+      height: 80px !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {	
+    .entry-image {
+      height: 114px !important;
+    }
+
+    .entry-title {
+      height: 140px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {	
+    .entry-image {
+      height: 150px !important;
+    }
+    .entry-title {
+      height: 100px !important;
+    }
+  }
+  @media only screen and (min-width: 1200px) {	
+    .entry-image {
+      height: 185px !important;
+    }
+    .entry-title {
+      height: 100px !important;
+    }
+  }
 </style>
 <!-- Page Title
 ============================================= -->
@@ -39,7 +79,7 @@
             <li class="activeFilter"><a href="#" data-filter="*">Show All</a></li>
             <?PHP if($typepage == 'allnews'){ ?>
               <li><a href="#" data-filter=".pf-news">News</a></li>
-              <li><a href="#" data-filter=".pf-release">Press release</a></li>
+              <!-- <li><a href="#" data-filter=".pf-release">Press release</a></li> -->
               <li><a href="#" data-filter=".pf-publicities">Publicities</a></li>
             <?PHP }else if($typepage == 'allseminar'){?>
               <li><a href="#" data-filter=".pf-seminar">Seminar</a></li>
@@ -59,7 +99,7 @@
 					<div id="portfolio" class="portfolio grid-container portfolio-3 portfolio-masonry clearfix">
             <?PHP foreach ($listnews as $key => $value) {?>
               <?PHP
-                $Linkurl = site_url('newscontent/'.$value['article_id']);
+                $Linkurl = site_url('news/newscontent/'.$value['article_id']);
                 if($value['article_type'] == 1){
                   $ps = 'news';
                   $folder = 'News';
@@ -69,7 +109,7 @@
                 }else if($value['article_type'] == 3){
                   $ps = 'publicities';
                   $folder = 'Publicities';
-                  $Linkurl = site_url('publicitiescontent/'.$value['article_id']);
+                  $Linkurl = site_url('news/publicitiescontent/'.$value['article_id']);
                 }else if($value['article_type'] == 4){
                   $ps = 'seminar';
                   $folder = 'Seminar';
@@ -82,24 +122,25 @@
               ?>
 						<article class="portfolio-item pf-<?=$ps?>">
               <div class="entry clearfix">
-                <div class="entry-image">
+                <div class="entry-image" >
                   <?PHP if($value['article_url'] == ""){?>
                   <a href="<?=$Linkurl;?>"><img class="image_fade" src="<?=base_url('uploads/custom/'.$value['article_image']);?>" alt=""></a>
                   <?PHP }else{?>
                   <iframe src="<?=$value['article_url'];?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   <?PHP }?>
                 </div>
-                <div class="entry-title">
-                  <h2><a href="<?=$Linkurl;?>"> <?=$value['article_title'];?></a></h2>
-                </div>
-                <ul class="entry-meta clearfix">
+                <!-- <ul class="entry-meta ">
                   <li><i class="icon-calendar3"></i> <?=date('d M Y', strtotime($value['article_datecreate']));?></li>
                   <li><i class="icon-folder-open"></i> <?=$folder;?></li>
                 </ul>
+                <div class="clearfix"></div> -->
+                <div class="entry-title">
+                  <h4><a class="color-blue" href="<?=$Linkurl;?>"> <p><?=character_limiter(strip_tags($value['article_title']),120);?></a></h4>
+                </div>
                 <div class="entry-content">
                   <!-- <p><?=character_limiter(strip_tags($value['article_detail']),50);?></p> -->
                   <p></p>
-                  <a href="<?=$Linkurl;?>"class="more-link">Read More</a>
+                  <a href="<?=$Linkurl;?>" class="button button-small button-border button-rounded button-aqua">Read More</a>
                 </div>
               </div>
 						</article>

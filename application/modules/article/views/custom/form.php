@@ -1,9 +1,9 @@
 <?PHP
 if($type == "news"){
-  $Title = "News & Press";
+  $Title = "News";
   $t = array(
     1 => 'News',
-    2 => 'Press Release'
+    // 2 => 'Press Release'
   );
 }else if($type == "publicities"){
   $Title = "Publicities";
@@ -27,6 +27,7 @@ if(isset($listdata) && count($listdata) != 0){
     $Text_sort = $value['article_sort'];
     $Text_eye = $value['article_show'];
     $Text_check = $value['article_status'];
+    $article_showhomepage = $value['article_showhomepage'];
   }
   $TitlePage = "Update";
   $actionUrl = site_url('article/custom/update/'.$type);
@@ -71,13 +72,13 @@ if(isset($listdata) && count($listdata) != 0){
                   <div class="mail-tools tooltip-demo">
                         <div class="btn-group pull-right">
                           <button class="btn btn-white btn-sm Btn-reload" data-toggle="tooltip" data-placement="left" title="" data-original-title="Refresh page"><i class="fa fa-refresh"></i> Refresh</button>
-                          <button class="btn btn-white btn-sm Btn-eye" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as show">
+                          <!-- <button class="btn btn-white btn-sm Btn-eye" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as show">
                             <?PHP if($Text_eye == 1){?>
                               <i class="fa fa-eye"></i>
                             <?PHP }else{ ?>
                               <i class="fa fa-eye-slash"></i>
                             <?PHP }?>
-                          </button>
+                          </button> -->
                           <button class="btn btn-white btn-sm Btn-check" data-toggle="tooltip" data-placement="top" title="" data-original-title="Mark as important">
                             <?PHP if($Text_check == 1){?>
                               <i class="fa fa-check-square-o"></i>
@@ -111,6 +112,7 @@ if(isset($listdata) && count($listdata) != 0){
                                     <input type="hidden" name="crfnews" id="crfnews" value="<?=$crfnews;?>">
                                     <input type="hidden" name="Id" id="Id" value="<?PHP if(isset($Id)){echo $Id;}?>">
                                     <input type="hidden" name="Text_eye" id="Text_eye" class="Text_eye" value="<?PHP if(isset($Text_eye)){echo $Text_eye;}?>">
+
                                     <input type="hidden" name="Text_check" id="Text_check" class="Text_check" value="<?PHP if(isset($Text_check)){echo $Text_check;}?>">
                                     <div class="form-group"><label class="col-sm-2 control-label">Title<span class="text-muted">*</span></label>
                                         <div class="col-sm-10"><input type="text" name="Text_title" id="Text_title" class="form-control" value="<?PHP if(isset($Text_title)){echo $Text_title;}?>"></div>
@@ -137,6 +139,17 @@ if(isset($listdata) && count($listdata) != 0){
                                           <input type="text" name="Text_url" id="Text_url" class="form-control" value="<?PHP if(isset($Text_url)){echo $Text_url;}?>">
                                         </div>
                                     </div>
+                                    <?PHP if($type == "news" || $type == "publicities"){ ?>
+                                    <div class="form-group">
+                                      <label class="col-sm-2 control-label">Show Homepage</label>
+                                      <div class="col-sm-4">
+                                          <select name="Text_showhomepage" id="Text_showhomepage" tabindex="9" class="form-control">
+                                            <option value="1" <?PHP if(isset($article_showhomepage) and $article_showhomepage == 1){echo 'selected';}?>>Not Homepage</option>
+                                            <option value="2" <?PHP if(isset($article_showhomepage) and $article_showhomepage == 2){echo 'selected';}?>>Show Homepage</option>
+                                          </select>
+                                      </div>
+                                    </div>
+                                    <?PHP } ?>
                                     <div class="form-group">
                                       <label class="col-sm-2 control-label">Date<span class="text-muted">*</span></label>
                                       <div class="col-sm-4">

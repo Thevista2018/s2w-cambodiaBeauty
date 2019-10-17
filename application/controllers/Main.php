@@ -28,8 +28,7 @@ class Main extends CI_Controller {
 
 		$condition = array();
 		$condition['fide'] = "*";
-		$condition['where'] = "(article_type = 1 OR article_type = 2 OR article_type = 3)";
-		$condition['where'].= " AND article_status = 2 AND article_show = 1";
+		$condition['where']= array('article_status' => 1, 'article_show' => 1 , 'article_showhomepage' => 2);
 		$condition['orderby'] = 'article_sort ASC,article_id DESC';
 		$data['listArticle'] = $this->main->listArticle($condition);
 
@@ -38,6 +37,12 @@ class Main extends CI_Controller {
 		$condition['where'] = array('download_status' => 2, 'download_show' => 1);
 		$condition['orderby'] = 'download_sort ASC,download_id DESC';
 		$data['listDowload'] = $this->main->listDowload($condition);
+
+		$condition = array();
+		$condition['fide'] = "*";
+		$condition['where'] = array('supporter_show' => 1, 'supporter_status' => 1);
+		$condition['orderby'] = 'supporter_sort ASC';
+		$data['listSupporter'] = $this->main->listSupporter($condition);
 
 		$this->template->frontend('main/main',$data);
 	}
@@ -70,17 +75,34 @@ class Main extends CI_Controller {
 		$this->template->frontend('main/pagesubdetail',$data);
 	}
 
-	public function banner(){
-		$this->load->views('main/banner');
-	}
-
-	public function contactus(){
+	public function salesrepresentative(){
 		$data = array();
 
 		$condition = array();
 		$condition['fide'] = "*";
-		$condition['where'] = array('consub_id' => 27);
+		$condition['where'] = array('consub_id' => 22);
 		$data['listdata'] = $this->main->listSubcontent($condition);
+
+		$condition = array();
+		$condition['fide'] = "*";
+		$condition['where'] = array('salerep_status' => 1, 'salerep_show'=>1);
+		$condition['orderby'] = "salerep_show asc";
+		$data['listsalesrepresentative'] = $this->main->listSalesrepresentative($condition);
+
+		$this->template->frontend('main/salesrepresentative',$data);
+	}
+
+	public function banner(){
+		$this->load->views('main/banner');
+	}
+
+	public function organizer(){
+		$data = array();
+
+		// $condition = array();
+		// $condition['fide'] = "*";
+		// $condition['where'] = array('consub_id' => 27);
+		// $data['listdata'] = $this->main->listSubcontent($condition);
 
 		$this->template->frontend('main/contactus',$data);
 	}

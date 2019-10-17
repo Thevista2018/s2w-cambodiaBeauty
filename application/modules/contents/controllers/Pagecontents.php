@@ -33,7 +33,7 @@ class Pagecontents extends MX_Controller {
 
 			//Data in case update
 			$condition = array();
-			$condition['fide'] = "con_id,con_page_th,con_decision_th,con_detail_th,con_page_en,con_decision_en,con_detail_en";
+			$condition['fide'] = "*";
 			$condition['where'] = array('con_id' => $id, 'con_status' => 1);
 			$data['listdata'] = $this->pagecontents->listData($condition);
 			if(count($data['listdata']) == 0){
@@ -114,6 +114,7 @@ class Pagecontents extends MX_Controller {
 				'con_page_en' => $this->input->post('Text_namePageEN'),
 				'con_decision_en' => $this->input->post('Text_decisionEN'),
 				'con_detail_en' => $this->input->post('Text_detailPageEN'),
+				'con_url' => $this->input->post('Text_url'),
 				'con_status' => 1,
 				'con_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'con_lastedit' => date('Y-m-d H:i:s')
@@ -125,6 +126,7 @@ class Pagecontents extends MX_Controller {
 				'con_page_th' => $this->input->post('Text_namePageTH'),
 				'con_decision_th' => $this->input->post('Text_decisionTH'),
 				'con_detail_th' => $this->input->post('Text_detailPageTH'),
+				'con_url' => $this->input->post('Text_url'),
 				'con_status' => 1,
 				'con_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'con_lastedit' => date('Y-m-d H:i:s')

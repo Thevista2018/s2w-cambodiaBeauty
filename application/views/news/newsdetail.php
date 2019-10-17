@@ -30,15 +30,13 @@
   <div class="content-wrap notoppadding topmargin-sm">
 
     <div class="container clearfix nobottommargin">
-        <div class="col_one_fourth">
-          <?=$this->banner->show();?>
-        </div>
+        
 
-        <div class="col_three_fourth col_last">
+        <div class="col_full">
 
           <!-- Post Content
 					============================================= -->
-					<div class="postcontent nobottommargin clearfix">
+					<div class=" nobottommargin clearfix">
 
 						<div class="single-post nobottommargin">
 
@@ -74,7 +72,6 @@
 								<!-- Entry Content
 								============================================= -->
 								<div class="entry-content notopmargin">
-
 									<?=$Detail;?>
 									<!-- Post Single - Content End -->
                 </div>

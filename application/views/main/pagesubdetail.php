@@ -34,10 +34,7 @@
         </div>
 
         <div class="col_three_fourth col_last">
-          <!-- <div class="fancy-title title-bottom-border">
-            <h3>News & Publicities</h3>
-          </div> -->
-          <?PHP if($Id == 9){?>
+          <!-- <?PHP if($Id == 9){?>
             <?PHP if(count($listIndustry) != 0){?>
             <ul class="list-group">
               <?PHP foreach ($listIndustry as $key => $value) {?>
@@ -49,8 +46,9 @@
               <?PHP }?>
 						</ul>
             <?PHP }?>
-          <?PHP }else{ echo $Detail;}?>
+          <?PHP }else{ echo $Detail;}?> -->
 
+          <?=$Detail; ?>
         </div>
 
     </div>

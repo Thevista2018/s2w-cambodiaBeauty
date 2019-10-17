@@ -49,9 +49,10 @@
                   <thead>
                   <tr>
                     <th style="width:10%;">#</th>
-                    <th style="width:60%;">Page Name</th>
+                    <th style="width:40%;">Page Name</th>
                     <th style="width:15%;">Edit By</th>
                     <th style="width:15%;">Action</th>
+                    <th style="width:15%;" align="center">Hide/show</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -85,6 +86,13 @@
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('contents/subcontents/delete/'.$value['consub_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>
+                      </td>
+                      <td class="center">
+                        <?PHP if($value['consub_show'] == 1){?>
+                          <span class="label label-info">Active</span>
+                        <?PHP }else{ ?>
+                          <span class="label label-danger">Deactivate</span>
+                        <?PHP }?>
                       </td>
                   </tr>
                   <?PHP }?>

@@ -26,15 +26,15 @@
   <div class="content-wrap notoppadding topmargin-sm">
 
     <div class="container clearfix nobottommargin">
-        <div class="col_one_fourth">
+        <!-- <div class="col_one_fourth">
           <?=$this->banner->show();?>
-        </div>
+        </div> -->
 
-        <div class="col_three_fourth col_last">
+        <div class="col_full">
 
           <!-- Post Content
 					============================================= -->
-					<div class="postcontent nobottommargin clearfix">
+					<div class=" nobottommargin clearfix">
 
 						<div class="single-post nobottommargin">
 
@@ -56,7 +56,7 @@
 								</ul><!-- .entry-meta end -->
 								<!-- Entry Content
 								============================================= -->
-								<div class="entry-content notopmargin">
+								<div class="entry-content notopmargin ">
                   <?PHP
                     $this->db->select('*');
                     $this->db->where(array('gallery_id' => $value['gallery_id'], 'subgallery_status !=' => 0));
@@ -64,9 +64,9 @@
                     $query = $this->db->get('tb_subgallery');
                     $listsubgallery = $query->result_array();
                   ?>
-                  <div data-lightbox="gallery">
+                  <div class="grid-gallery" data-lightbox="gallery">
                     <?PHP foreach ($listsubgallery as $key => $value) {?>
-                    <a href="<?=base_url('uploads/gallery/'.$value['subgallery_images'])?>" data-lightbox="gallery-item"><img class="image_fade boximggallery" src="<?=base_url('uploads/gallery/'.$value['subgallery_images'])?>" alt="<?=base_url('uploads/gallery/'.$value['subgallery_name'])?>"></a>
+                    <a href="<?=base_url('uploads/gallery/'.$value['subgallery_images'])?>" data-lightbox="gallery-item"><img class="image_fade boximggallery border-gallery-show" src="<?=base_url('uploads/gallery/'.$value['subgallery_images'])?>" alt="<?=base_url('uploads/gallery/'.$value['subgallery_name'])?>"></a>
                     <?PHP }?>
                   </div>
 

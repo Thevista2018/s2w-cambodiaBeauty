@@ -171,5 +171,21 @@ define(["jquery","jqueryForm","toastr","sweetalert","easyautocomplete"], functio
     })
   }
 
+  methods.showandhideData = function(e){
+    var url = $(e).attr('data-url');
+    swal({
+      title: "Confirm hide / show?",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#DD6B55",
+      confirmButtonText: "Yes!",
+      closeOnConfirm: false },
+      function (isConfirm) {
+      if (isConfirm) {
+        location.href = url;
+      }
+    });
+  }
+
   return methods;
 });

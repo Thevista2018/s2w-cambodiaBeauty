@@ -5,7 +5,19 @@
 
 /* ===============================  button =============================== */
 .btn-primary {
-    background-color: #337ab7;
-    border-color: #337ab7;
+    background-color: #4ED1DA;
+    border-color: #4ED1DA;
     color: #FFF;
+}
+
+.btn-primary.active, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary:focus, .btn-primary:hover, .open .dropdown-toggle.btn-primary {
+    background-color: #43b6be;
+    border-color: #43b6be;
+    color: #FFF;
+}
+
+.btn-primary.active.focus, .btn-primary.active:focus, .btn-primary.active:hover, .btn-primary:active.focus, .btn-primary:active:focus, .btn-primary:active:hover, .open>.dropdown-toggle.btn-primary.focus, .open>.dropdown-toggle.btn-primary:focus, .open>.dropdown-toggle.btn-primary:hover {
+    color: #fff;
+    background-color: #43b6be;
+    border-color: #43b6be;
 }

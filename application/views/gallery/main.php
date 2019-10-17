@@ -24,7 +24,7 @@
     <!-- <span><?=$Decision;?></span> -->
     <ol class="breadcrumb">
       <li><a href="#">Home</a></li>
-      <li class="active">Gallery</li>
+      <li class="active">Gallery1</li>
     </ol>
   </div>
 
@@ -53,7 +53,6 @@
             ?>
             <li><a href="#" data-filter=".pf-<?=$value;?>">Year : <?=$value;?></a></li>
             <?PHP }}?>
-
 					</ul><!-- #portfolio-filter end -->
 
 					<div id="portfolio-shuffle" class="portfolio-shuffle" data-container="#portfolio">

@@ -68,5 +68,32 @@ class Main_model extends CI_Model {
 		return $query->result_array();
 	}
 
+	public function listSupporter($data = array()){
+		$this->db->select($data['fide']);
+		if(!empty($data['where'])){$this->db->where($data['where']);}
+		if(!empty($data['orderby'])){$this->db->order_by($data['orderby']);}
+		if(!empty($data['limit'])){$this->db->limit($data['limit'][0],$data['limit'][1]);}
+		$query = $this->db->get('tb_supporter');
+		return $query->result_array();
+	}
+
+	public function listSupporterlogo($data = array()){
+		$this->db->select($data['fide']);
+		if(!empty($data['where'])){$this->db->where($data['where']);}
+		if(!empty($data['orderby'])){$this->db->order_by($data['orderby']);}
+		if(!empty($data['limit'])){$this->db->limit($data['limit'][0],$data['limit'][1]);}
+		$query = $this->db->get('tb_supporterdetail');
+		return $query->result_array();
+	}
+
+	public function listSalesrepresentative($data = array()){
+		$this->db->select($data['fide']);
+		if(!empty($data['where'])){$this->db->where($data['where']);}
+		if(!empty($data['orderby'])){$this->db->order_by($data['orderby']);}
+		if(!empty($data['limit'])){$this->db->limit($data['limit'][0],$data['limit'][1]);}
+		$query = $this->db->get('tb_salesrepresentative');
+		return $query->result_array();
+	}
+
 }
 ?>

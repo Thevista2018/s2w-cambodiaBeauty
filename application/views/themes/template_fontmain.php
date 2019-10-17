@@ -117,10 +117,29 @@
 					============================================= -->
 					<div id="top-social">
 						<ul>
-							<li><a href="#" class="si-facebook" data-hover-width="109" style="width: 40px;"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
-							<li><a href="mailto:info@canvas.com" class="si-email3" data-hover-width="153" style="width: 40px;"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text">info@canvas.com</span></a></li>
-							<li><a href="tel:+91.11.85412542" class="si-call" data-hover-width="156" style="width: 40px;"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text">+91.11.85412542</span></a></li>
-						</ul>
+                            <?PHP if($Text_linktwitter != ""){?>
+                            <li><a href="<?=$Text_linktwitter;?>" target="_bank" class="si-twitter" data-hover-width="95" style="width: 40px;"><span class="ts-icon"><i class="icon-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_linkyoutube != ""){?>
+                            <li><a href="<?=$Text_linkyoutube;?>" target="_bank" class="si-pinterest" data-hover-width="106" style="width: 40px;"><span class="ts-icon"><i class="icon-youtube"></i></span><span class="ts-text">Youtube</span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_linkgoogleplus != ""){?>
+                            <li><a href="<?=$Text_linkgoogleplus;?>" target="_bank" class="si-dribbble" data-hover-width="92" style="width: 40px;"><span class="ts-icon"><i class="icon-gplus"></i></span><span class="ts-text">G +</span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_linkinstagram != ""){?>
+                            <li><a href="<?=$Text_linkinstagram;?>" target="_bank" class="si-instagram" data-hover-width="111" style="width: 40px;"><span class="ts-icon"><i class="icon-instagram2"></i></span><span class="ts-text">Instagram</span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_linkfacebook != ""){?>
+							<li><a href="<?=$Text_linkfacebook;?>" target="_bank" class="si-facebook" data-hover-width="109" style="width: 40px;"><span class="ts-icon"><i class="icon-facebook"></i></span><span class="ts-text">Facebook</span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_Emailcompany != ""){?>
+                            <li><a href="mailto:<?=$Text_Emailcompany;?>" class="si-email3" data-hover-width="153" style="width: 40px;"><span class="ts-icon"><i class="icon-email3"></i></span><span class="ts-text"><?=$Text_Emailcompany;?></span></a></li>
+                            <?PHP } ?>
+                            <?PHP if($Text_Phoncompany != ""){?>
+                            <li><a href="tel:<?=$Text_Phoncompany;?>" class="si-call" data-hover-width="156" style="width: 40px;"><span class="ts-icon"><i class="icon-call"></i></span><span class="ts-text"><?=$Text_Phoncompany;?></span></a></li>
+                            <?PHP } ?>
+                        </ul>
+                    
                     </div>
                     <!-- #top-social end -->
 

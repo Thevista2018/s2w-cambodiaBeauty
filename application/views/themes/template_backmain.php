@@ -58,7 +58,7 @@
                 <a href="<?=site_url('contents/pagecontents/index');?>"><i class="fa fa-list-alt"></i> <span class="nav-label">Contents</span></a>
             </li>
             <li>
-                <a href="<?=site_url('article/custom/index/news');?>"><i class="fa fa-newspaper-o"></i> <span class="nav-label">News & Press</span></a>
+                <a href="<?=site_url('article/custom/index/news');?>"><i class="fa fa-newspaper-o"></i> <span class="nav-label">News</span></a>
             </li>
             <li>
                 <a href="<?=site_url('article/custom/index/publicities');?>"><i class="fa fa-building-o"></i> <span class="nav-label">Publicities</span></a>
@@ -74,6 +74,12 @@
             </li>
             <li>
                 <a href="<?=site_url('article/industry/index');?>"><i class="fa fa-file-text-o"></i> <span class="nav-label">Industry</span></a>
+            </li>
+            <li>
+                <a href="<?=site_url('contents/supporter/index');?>"><i class="fa fa-group"></i> <span class="nav-label">supporter</span></a>
+            </li>
+            <li>
+                <a href="<?=site_url('contents/salesrepresentative/index');?>"><i class="fa fa-bookmark-o"></i> <span class="nav-label">Sales representative</span></a>
             </li>
             <li>
                 <a href="<?=site_url('contents/slider/index');?>"><i class="fa fa-random"></i> <span class="nav-label">Slider</span></a>
@@ -141,6 +147,21 @@
 
    });
 </script> -->
+
+<script type="text/javascript">
+    function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                $('#showimg').attr('src', e.target.result);
+            }
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+</script>
+
 <?PHP if(!empty($js)){echo $js;}?>
 
 </body>

@@ -68,7 +68,9 @@ class Custom extends MX_Controller {
 
 	public function create($type){
 
+		
 		if($this->tokens->verify('crfnews')){
+			
 			$data = $this->_setArticle();
 			$data['article_createby'] = $this->encryption->decrypt($this->input->cookie('sysn'));
 			$data['article_datecreate'] = date('Y-m-d', strtotime($this->input->post('Text_date')));
@@ -113,6 +115,28 @@ class Custom extends MX_Controller {
 		die;
 	}
 
+	public function show($type,$id){
+
+        $data['article_id'] = $id;
+        $data['article_show'] = 1;
+
+        $this->custom->updateData($data);
+        
+        redirect('article/custom/index/'.$type);
+        
+    }
+
+    public function hide($type,$id){
+        
+        $data['article_id'] = $id;
+        $data['article_show'] = 2;
+
+        $this->custom->updateData($data);
+        
+        redirect('article/custom/index/'.$type);
+
+    }
+
 	private function _setArticle(){
 			return array(
 				'article_type' => $this->input->post('Text_type'),
@@ -124,7 +148,8 @@ class Custom extends MX_Controller {
 				'article_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'article_lastedit' => date('Y-m-d H:i:s'),
 				'article_show' => $this->input->post('Text_eye'),
-				'article_status' => $this->input->post('Text_check')
+				'article_status' => $this->input->post('Text_check'),
+				'article_showhomepage' => $this->input->post('Text_showhomepage')
 			);
 	}
 

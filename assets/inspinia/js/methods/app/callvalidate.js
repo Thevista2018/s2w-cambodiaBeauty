@@ -7,41 +7,17 @@ define(["jquery","function","bootstrap","validate"], function($,fun) {
         return this.optional(element) || /^[a-z]+$/i.test(value);
     }, "Letters only please"); 
 
-    // Form content page detail update EN
-    if($("#formPagedetailEN").length){
-      $("#formPagedetailEN").validate({
-        rules: {
-            Text_namePageEN: {
-                required: true
-            }
-        },
-        messages: {
-            Text_namePageEN: {
-                required: "please enter page name."
-            }
-        },submitHandler: function(form) {
-          var Id = $('#Id').val();
-          if(Id != ""){
-            fun.dataSubmit(form);
-          }else{
-            fun.dataSubmitdir(form);
-          }
-          return false;
-        }
-      });
-    }
-
     // Form content page detail update TH
     if($("#formPagedetailTH").length){
       $("#formPagedetailTH").validate({
         rules: {
-            Text_namePageTH: {
+          Text_namePageTH: {
                 required: true
             }
         },
         messages: {
-            Text_namePageTH: {
-                required: "please enter page name."
+          Text_namePageTH: {
+                required: "please enter data."
             }
         },submitHandler: function(form) {
           var Id = $('#Id').val();
@@ -55,17 +31,16 @@ define(["jquery","function","bootstrap","validate"], function($,fun) {
       });
     }
 
-    // Form sub content page detail update TH
     if($("#formSubdetailTH").length){
       $("#formSubdetailTH").validate({
         rules: {
-            Text_namePageTH: {
+          Text_namePageTH: {
                 required: true
             }
         },
         messages: {
-            Text_namePageTH: {
-                required: "please enter page name."
+          Text_namePageTH: {
+                required: "please enter data."
             }
         },submitHandler: function(form) {
           var Id = $('#Id').val();
@@ -183,6 +158,39 @@ define(["jquery","function","bootstrap","validate"], function($,fun) {
         }
       });
     }
+
+     /*############# salesrepresentative #############*/
+    // Form create en
+    if($("#formSalesrepresentative_Create").length){
+      $("#formSalesrepresentative_Create").validate({
+        rules: {
+          Text_file: { required: true  },
+          Text_Title: { required: true  },
+        },
+        messages: {
+          Text_file: { required: "please select file." },
+          Text_Title: { required: "please enter title." },
+        },submitHandler: function(form) {
+          fun.dataSubmitdir(form);
+          return false;
+        }
+      });
+    }
+    // Form update en
+    if($("#formSalesrepresentative_Update").length){
+      $("#formSalesrepresentative_Update").validate({
+        rules: {
+          Text_Title: { required: true  },
+        },
+        messages: {
+          Text_Title: { required: "please enter title." },
+        },submitHandler: function(form) {
+          fun.dataSubmit(form);
+          return false;
+        }
+      });
+    }
+
 
     /*############# News #############*/
     // Form create en

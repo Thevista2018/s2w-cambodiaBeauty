@@ -93,6 +93,78 @@ class News extends CI_Controller {
 		$this->template->frontend('news/newsdetail',$data);
 	}
 
+	public function newscontent($id = "",$type = 'news'){
+
+		$data = array();
+		if(!empty($id)){
+			$condition = array();
+
+			$condition['fide'] = "*";
+			if($type == 'news'){
+				$data['Pages'] = 'News & Press release';
+				$condition['where'] = "(article_type = 1 OR article_type = 2)";
+			}else if($type == 'publicities'){
+				$condition['where'] = "article_type = 3";
+				$data['Pages'] = 'Publicities';
+			}else if($type == 'seminar'){
+				$condition['where'] = "article_type = 4";
+				$data['Pages'] = 'Seminar Conference';
+			}else if($type == 'activity'){
+				$condition['where'] = "article_type = 5";
+				$data['Pages'] = 'Seminar Activity';
+			}
+
+			$data['typepage'] = $type;
+
+			$condition['where'].= " AND article_status != 0 AND article_id = ".$id;
+			$data['listnews'] = $this->news->listData($condition);
+
+			if(count($data['listnews']) == 0){
+				show_404();
+			}
+		}else{
+			show_404();
+		}
+
+		$this->template->frontend('news/newsdetail',$data);
+	}
+
+	public function publicitiescontent($id = "",$type = 'publicities'){
+
+		$data = array();
+		if(!empty($id)){
+			$condition = array();
+
+			$condition['fide'] = "*";
+			if($type == 'news'){
+				$data['Pages'] = 'News & Press release';
+				$condition['where'] = "(article_type = 1 OR article_type = 2)";
+			}else if($type == 'publicities'){
+				$condition['where'] = "article_type = 3";
+				$data['Pages'] = 'Publicities';
+			}else if($type == 'seminar'){
+				$condition['where'] = "article_type = 4";
+				$data['Pages'] = 'Seminar Conference';
+			}else if($type == 'activity'){
+				$condition['where'] = "article_type = 5";
+				$data['Pages'] = 'Seminar Activity';
+			}
+
+			$data['typepage'] = $type;
+
+			$condition['where'].= " AND article_status != 0 AND article_id = ".$id;
+			$data['listnews'] = $this->news->listData($condition);
+
+			if(count($data['listnews']) == 0){
+				show_404();
+			}
+		}else{
+			show_404();
+		}
+
+		$this->template->frontend('news/newsdetail',$data);
+	}
+	
 	public function gallery(){
 		$data = array();
 

@@ -14,11 +14,11 @@ class Captcha extends CI_Controller {
 			unlink($src);
 		}
 		$vals = array(
-							'font_path'     => './assets/canvas/captcha/times_new_yorker.ttf',
-							'font_size'     => 16,
-			        'img_path'      => './assets/canvas/captcha/',
-			        'img_url'       => base_url('assets/canvas/captcha/')
-						);
+			'font_path'     => './assets/canvas/captcha/times_new_yorker.ttf',
+			'font_size'     => 16,
+			'img_path'      => './assets/canvas/captcha/',
+			'img_url'       => base_url('assets/canvas/captcha/')
+		);
 		$cap = create_captcha($vals);
 		$data = array(
 			'filename' => $cap['filename'],

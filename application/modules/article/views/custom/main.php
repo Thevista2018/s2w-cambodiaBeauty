@@ -1,6 +1,6 @@
 <?PHP
   if($type == "news"){
-    $Title = "News & Press";
+    $Title = "News";
   }else if($type == "publicities"){
     $Title = "Publicities";
   }else if($type == "seminars"){
@@ -114,6 +114,11 @@
                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" aria-expanded="false">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a href="<?=site_url('article/custom/form/'.$type.'/'.$value['article_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
+                              <?PHP if($value['article_show']  != 1){ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('article/custom/show/'.$type.'/'.$value['article_id']);?>"><i class="fa fa-eye"></i> Show</a></li>
+                              <?PHP }else{ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('article/custom/hide/'.$type.'/'.$value['article_id']);?>"><i class="fa fa-eye-slash"></i> Hide</a></li>
+                              <?PHP } ?>
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('article/custom/delete/'.$type.'/'.$value['article_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>

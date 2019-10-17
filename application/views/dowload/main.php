@@ -1,3 +1,37 @@
+<style type="text/css">
+  .entry-image{
+    max-height: 250px;
+    overflow: hidden;
+    border:1px solid #ddd;
+    padding: 5px;
+  }
+  .entry {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #F5F5F5;
+  }
+  @media only screen and (min-width: 576px) {	
+    .entry-image {
+      height: 148px !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {	
+    .entry-image {
+      height: 114px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {	
+    .entry-image {
+      height: 150px !important;
+    }
+  }
+  @media only screen and (min-width: 1200px) {	
+    .entry-image {
+      height: 185px !important;
+    }
+  }
+</style>
 <!-- Page Title
 ============================================= -->
 <section id="page-title">
@@ -65,14 +99,15 @@
                   <?PHP }?>
                 </div>
                 <div class="entry-title">
-                  <h2><a href="<?=base_url('uploads/download/file/'.$value['download_file']);?>" target="_blank"> <?=$value['download_title'];?></a></h2>
+                  <h4><a href="<?=base_url('uploads/download/file/'.$value['download_file']);?>" class="color-blue" target="_blank"> <?=$value['download_title'];?></a></h4>
                 </div>
                 <ul class="entry-meta clearfix">
                   <li><i class="icon-calendar3"></i> <?=date('d M Y', strtotime($value['download_datecreate']));?></li>
                   <li><i class="icon-folder-open"></i> <?=$folder;?></li>
                 </ul>
+                <br/>
                 <div class="entry-content">
-                  <a href="<?=base_url('uploads/download/file/'.$value['download_file']);?>" target="_blank" class="more-link">Dowload File</a>
+                  <a href="<?=base_url('uploads/download/file/'.$value['download_file']);?>" class="button button-border button-rounded button-aqua" target="_blank" class="color-blue">Dowload File</a>
                 </div>
               </div>
 						</article>

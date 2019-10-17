@@ -22,7 +22,7 @@ class Subcontents extends MX_Controller {
 
 			//List data subcontents
 			$condition = array();
-			$condition['fide'] = "consub_id,consub_page_en,consub_decision_en,consub_page_th,consub_decision_th,consub_page_en,consub_editby,consub_lastedit";
+			$condition['fide'] = "*";
 			$condition['where'] = array('consub_status' => 1, 'con_id' => $Id);
 			$data['listdata'] = $this->subcontents->listData($condition);
 
@@ -74,14 +74,13 @@ class Subcontents extends MX_Controller {
 		if(!empty($type)){
 			if($this->tokens->verify('crfsubcontent')){
 
-				if($type == "en"){
-					$data = $this->_setContentEN();
-
-				}else if("th"){
-					$data = $this->_setContentTH();
-				}
+				
+				$data = $this->_setContentTH();
+				
 				$data['consub_createby'] = $this->encryption->decrypt($this->input->cookie('sysn'));
 				$data['consub_datecreate'] = date('Y-m-d H:i:s');
+				$data['consub_show'] = 1;
+
 				$Id = $this->subcontents->insertData($data);
 
 				$con_id = $this->input->post('con_id');
@@ -98,14 +97,13 @@ class Subcontents extends MX_Controller {
 	}
 
 	public function update($type = ""){
+
 		if(!empty($type)){
 			if($this->tokens->verify('crfsubcontent')){
-				if($type == "en"){
-					$data = $this->_setContentEN();
-				}else if("th"){
-					$data = $this->_setContentTH();
-				}
+				
+				$data = $this->_setContentTH();
 				$data['consub_id'] = $this->input->post('Id');
+				$data['consub_show'] = $this->input->post('Text_eye');
 				$con_id = $this->input->post('con_id');
 
 				$this->subcontents->updateData($data);
@@ -119,23 +117,14 @@ class Subcontents extends MX_Controller {
 		}
 		die;
 	}
-	private function _setContentEN(){
-			return array(
-				'con_id' => $this->input->post('con_id'),
-				'consub_page_en' => $this->input->post('Text_namePageEN'),
-				'consub_decision_en' => $this->input->post('Text_decisionEN'),
-				'consub_detail_en' => $this->input->post('Text_detailPageEN'),
-				'consub_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
-				'consub_lastedit' => date('Y-m-d H:i:s'),
-				'consub_status' => 1
-			);
-	}
+
 	private function _setContentTH(){
 			return array(
 				'con_id' => $this->input->post('con_id'),
 				'consub_page_th' => $this->input->post('Text_namePageTH'),
+				'consub_page_th' => $this->input->post('Text_namePageTH'),
 				'consub_decision_th' => $this->input->post('Text_decisionTH'),
-				'consub_detail_th' => $this->input->post('Text_detailPageTH'),
+				'consub_url' => $this->input->post('Text_url'),
 				'consub_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'consub_lastedit' => date('Y-m-d H:i:s'),
 				'consub_status' => 1

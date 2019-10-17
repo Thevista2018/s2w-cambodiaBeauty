@@ -64,29 +64,95 @@
 						============================================= -->
 						<div id="posts" class="small-thumbs">
 
-              <h4 style="margin-bottom: 10px !important;">NEWS <span class="color-blue">& PUBLICITIES</span></h4>
-              <div class="border-color-blue"></div>
-
-							<div class="entry clearfix margin-Top-wedget">
-                <a href="images/blog/full/17.jpg">
-                  <div class="entry-image">
-                    <img class="image_fade color-black" src="<?=base_url('uploads/news/ID_00009.png');?>" alt="NEWS & PUBLICITIES">
+              <?PHP if(count($listArticle)!= 0) {?>
+                <h4 style="margin-bottom: 10px !important;">NEWS <span class="color-blue">& PUBLICITIES</span></h4>
+                <div class="border-color-blue"></div>
+                <?PHP foreach ($listArticle as $key => $value) { 
+            
+                  $Linkurl = site_url('news/newscontent/'.$value['article_id']);
+                  if($value['article_type'] == 1){
+                    $ps = 'news';
+                    $folder = 'News';
+                  }else if($value['article_type'] == 2){
+                    $ps = 'release';
+                    $folder = 'Press Release';
+                  }else if($value['article_type'] == 3){
+                    $ps = 'publicities';
+                    $folder = 'Publicities';
+                    $Linkurl = site_url('news/publicitiescontent/'.$value['article_id']);
+                  }else if($value['article_type'] == 4){
+                    $ps = 'seminar';
+                    $folder = 'Seminar';
+                    $Linkurl = site_url('seminarscontent/'.$value['article_id']);
+                  }else if($value['article_type'] == 5){
+                    $ps = 'activity';
+                    $folder = 'Special Activity';
+                    $Linkurl = site_url('activitycontent/'.$value['article_id']);
+                  }
+                
+                ?>
+                  <div class="entry clearfix margin-Top-wedget">
+                    <a href="<?=$Linkurl;?>">
+                      <div class="entry-image">
+                        <?PHP if($value['article_url'] == ""){?>
+                          <a href="<?=$Linkurl;?>"><img class="image_fade" src="<?=base_url('uploads/custom/'.$value['article_image']);?>" alt=""></a>
+                        <?PHP }else{?>
+                          <iframe src="<?=$value['article_url'];?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        <?PHP }?>
+                      </div>
+                      <div class="entry-c">
+                        <div class="entry-title">
+                          <h2 class="color-blue"><?=$value['article_title'];?></h2>
+                        </div>
+                        <div class="entry-content color-black">
+                          <p><?=character_limiter(strip_tags($value['article_detail']),50);?></p>
+                        </div>
+                        <div class="color-blue text-right">
+                        <?=date('d/m/Y', strtotime($value['article_lastedit']));?>
+                        </div>
+                      </div>
+                    </a>
                   </div>
-                  <div class="entry-c">
-                    <div class="entry-title">
-                      <h2 class="color-blue">This is a Standard post with a Preview Image</h2>
-                    </div>
-                    <div class="entry-content color-black">
-                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in. Eligendi, deserunt, blanditiis est quisquam doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque vitae voluptatem libero at eveniet veritatis ab facere.</p>
-                    </div>
-                    <div class="color-blue text-right">
-                      01/01/2019
-                    </div>
-                  </div>
-                </a>
-							</div>
+                <?PHP } ?>
+              <?PHP } ?>
 
             </div>
+
+            <?PHP if(count($listSupporter)!= 0) {?>
+              <?PHP foreach ($listSupporter as $key => $value) { ?>
+                <div class="col_full nobottommargin">
+                  <h4 style="margin-bottom: 10px !important;"><?=$value['supporter_title'];?> <span class="color-blue"><?=$value['supporter_title2'];?></span></h4>
+                  <div class="border-color-blue"></div>
+
+                  <?PHP
+                    $this->db->select("*");
+                    $this->db->where(array('supportertype_show' => 1, 'supportertype_status' => 1, 'supporter_id' => $value['supporter_id']));
+                    $this->db->order_by('supportertype_sort asc');
+                    $query_supporterdetail = $this->db->get('tb_supporterdetail');
+                    $listsupporterdetail = $query_supporterdetail->result_array();
+                  ?>
+                  <div class="clearfix" style="margin-top: 20px; margin-bottom: 20px;">
+                    <?PHP if(count($listsupporterdetail)!= 6) {?>     
+                    <div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="20" data-nav="false" >
+                    <?PHP }else{ ?>      
+                      <div id="oc-clients" class="owl-carousel image-carousel carousel-widget" data-margin="20" data-loop="true" data-nav="false" data-autoplay="5000" data-pagi="false" data-items-xxs="2" data-items-xs="3" data-items-sm="4" data-items-md="5"  >
+                    <?PHP } ?>
+                        <?PHP if(count($listsupporterdetail)!= 0) {?>
+                          <?PHP foreach ($listsupporterdetail as $key => $values) { ?>
+                              <div class="oc-item">
+                                <a href="<?=$values['supportertype_url'];?>" target="_bank">
+                                  <img width="<?=$values['supportertype_wigth'];?>" height="<?=$values['supportertype_height'];?>" src="<?=base_url('uploads/supporter/'.$values['supportertype_images']);?>" alt="Clients">
+                                </a>
+                              </div>
+                          <?PHP } ?>
+                        <?PHP } ?>
+                      </div>
+                  </div>
+        
+                </div>
+              <?PHP } ?>
+            <?PHP } ?>
+            
             <!-- #posts end -->
 
 					</div>
