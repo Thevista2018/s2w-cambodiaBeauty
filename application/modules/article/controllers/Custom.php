@@ -80,6 +80,7 @@ class Custom extends MX_Controller {
 				'url' => site_url('article/custom/form/'.$type.'/'.$Id)
 			);
 			echo json_encode($result);
+			die;
 		}else{
 			$result = array(
 				'error' => true,
@@ -104,6 +105,7 @@ class Custom extends MX_Controller {
 				'msg' => ""
 			);
 			echo json_encode($result);
+			die;
 		}else{
 			$result = array(
 				'error' => true,

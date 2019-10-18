@@ -1,3 +1,16 @@
+<?php
+// settings
+$this->db->select("*");
+$query_settings = $this->db->get('tb_settings');
+$list_settings = $query_settings->result_array();
+
+if(isset($list_settings) && count($list_settings) != 0){
+    foreach ($list_settings as $key => $value) {
+        $Id = $value['set_id'];
+        $Text_logo              = $value['set_logo'];
+    }
+}
+?>
 <!DOCTYPE html>
 <html>
 
@@ -51,11 +64,14 @@
                     </ul>
                 </div>
                 <div class="logo-element">
-                    <img src="<?=base_url('assets/inspinia/images/img/logo.png');?>" alt="">
+                    <img src="<?=base_url('uploads/logo/'.$Text_logo);?>" alt="">
                 </div>
             </li>
             <li>
                 <a href="<?=site_url('contents/pagecontents/index');?>"><i class="fa fa-list-alt"></i> <span class="nav-label">Contents</span></a>
+            </li>
+            <li>
+                <a href="<?=site_url('article/custom/index/seminars');?>"><i class="fa fa-calendar"></i> <span class="nav-label">Seminars</span></a>
             </li>
             <li>
                 <a href="<?=site_url('article/custom/index/news');?>"><i class="fa fa-newspaper-o"></i> <span class="nav-label">News</span></a>
@@ -67,16 +83,13 @@
                 <a href="<?=site_url('gallery/activity/index');?>"><i class="fa fa-camera-retro"></i> <span class="nav-label">Gallery</span></a>
             </li>
             <li>
-                <a href="<?=site_url('article/custom/index/seminars');?>"><i class="fa fa-calendar"></i> <span class="nav-label">Seminars</span></a>
-            </li>
-            <li>
                 <a href="<?=site_url('manager/download/index');?>"><i class="fa fa-download"></i> <span class="nav-label">Download</span></a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="<?=site_url('article/industry/index');?>"><i class="fa fa-file-text-o"></i> <span class="nav-label">Industry</span></a>
-            </li>
+            </li> -->
             <li>
-                <a href="<?=site_url('contents/supporter/index');?>"><i class="fa fa-group"></i> <span class="nav-label">supporter</span></a>
+                <a href="<?=site_url('contents/supporter/index');?>"><i class="fa fa-group"></i> <span class="nav-label">Supporter</span></a>
             </li>
             <li>
                 <a href="<?=site_url('contents/salesrepresentative/index');?>"><i class="fa fa-bookmark-o"></i> <span class="nav-label">Sales representative</span></a>
@@ -131,7 +144,7 @@
   <?= $contents ?>
 <div class="footer" >
     <div>
-        <strong>Copyright</strong> Myanmar Build & Decor &copy; 2018
+        <strong>Copyright</strong> cambodiahealthbeauty.com &copy; 2019
     </div>
 </div>
 

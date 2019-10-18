@@ -78,6 +78,7 @@ class Settings extends MX_Controller {
 			);
 			echo json_encode($result);
 		}
+		die;
 	}
 	public function updatecontact(){
 		if($this->tokens->verify('formcrf')){
@@ -113,6 +114,7 @@ class Settings extends MX_Controller {
 			);
 			echo json_encode($result);
 		}
+		die;
 	}
 	public function updateextensions(){
 		if($this->tokens->verify('formcrf')){
@@ -140,6 +142,7 @@ class Settings extends MX_Controller {
 			);
 			echo json_encode($result);
 		}
+		die;
 	}
 	private function upfileimages($Fild_Name){
 		$fileold = $this->input->post($Fild_Name.'_old');

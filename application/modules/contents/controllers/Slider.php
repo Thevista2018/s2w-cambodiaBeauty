@@ -157,4 +157,26 @@ class Slider extends MX_Controller {
 		}
 	}
 
+	public function show($id){
+
+        $data['slider_id'] = $id;
+        $data['slider_show'] = 1;
+
+        $this->slider->updateData($data);
+        
+        redirect('contents/slider/index/'.$id);
+        
+    }
+
+    public function hide($id){
+        
+        $data['slider_id'] = $id;
+        $data['slider_show'] = 2;
+
+        $this->slider->updateData($data);
+        
+        redirect('contents/slider/index/'.$id);
+
+    }
+
 }

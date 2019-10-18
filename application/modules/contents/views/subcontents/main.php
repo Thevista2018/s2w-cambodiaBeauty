@@ -83,6 +83,11 @@
                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" aria-expanded="false">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a href="<?=site_url('contents/subcontents/form/'.$con_id."/".$value['consub_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
+                              <?PHP if($value['consub_show']  != 1){ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/subcontents/show/'.$con_id."/".$value['consub_id']);?>"><i class="fa fa-eye"></i> Show</a></li>
+                              <?PHP }else{ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/subcontents/hide/'.$con_id."/".$value['consub_id']);?>"><i class="fa fa-eye-slash"></i> Hide</a></li>
+                              <?PHP } ?>
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('contents/subcontents/delete/'.$value['consub_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>

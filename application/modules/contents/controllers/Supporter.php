@@ -130,4 +130,26 @@ class Supporter extends MX_Controller {
 		die;
 	}
 
+	public function show($id){
+
+        $data['supporter_id'] = $id;
+        $data['supporter_show'] = 1;
+
+        $this->supporter->updateData($data);
+        
+        redirect('contents/supporter/index');
+        
+    }
+
+    public function hide($id){
+        
+        $data['supporter_id'] = $id;
+        $data['supporter_show'] = 2;
+
+        $this->supporter->updateData($data);
+        
+        redirect('contents/supporter/index');
+
+    }
+
 }

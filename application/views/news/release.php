@@ -21,6 +21,46 @@
     max-height: 250px;
     overflow: hidden;
   }
+  .entry {
+    position: relative;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    border-bottom: 2px solid #F5F5F5;
+  }
+  @media only screen and (min-width: 576px) {	
+    .entry-image {
+      height: 148px !important;
+    }
+
+    .entry-title {
+      height: 80px !important;
+    }
+  }
+  @media only screen and (min-width: 768px) {	
+    .entry-image {
+      height: 114px !important;
+    }
+
+    .entry-title {
+      height: 140px !important;
+    }
+  }
+  @media only screen and (min-width: 992px) {	
+    .entry-image {
+      height: 150px !important;
+    }
+    .entry-title {
+      height: 100px !important;
+    }
+  }
+  @media only screen and (min-width: 1200px) {	
+    .entry-image {
+      height: 185px !important;
+    }
+    .entry-title {
+      height: 100px !important;
+    }
+  }
 </style>
 <!-- Page Title
 ============================================= -->
@@ -75,19 +115,19 @@
             <?PHP foreach ($listnews as $key => $value) {
               if($value['article_type'] == 1){
                 $folder = 'News';
-                $Linkurl = site_url('newscontent/'.$value['article_id']);
+                $Linkurl = site_url('news/newscontent/'.$value['article_id']);
               }else if($value['article_type'] == 2){
                 $folder = 'Press Release';
                 $Linkurl = site_url('newscontent/'.$value['article_id']);
               }else if($value['article_type'] == 3){
                 $folder = 'Publicities';
-                $Linkurl = site_url('publicitiescontent/'.$value['article_id']);
+                $Linkurl = site_url('news/publicitiescontent/'.$value['article_id']);
               }else if($value['article_type'] == 4){
                 $folder = 'Seminar';
-                $Linkurl = site_url('seminarscontent/'.$value['article_id']);
+                $Linkurl = site_url('news/seminarscontent/'.$value['article_id']);
               }else if($value['article_type'] == 5){
                 $folder = 'Special Activity';
-                $Linkurl = site_url('activitycontent/'.$value['article_id']);
+                $Linkurl = site_url('news/activitycontent/'.$value['article_id']);
               }
             ?>
             <?PHP $d = explode('-', $value['article_datecreate']);?>

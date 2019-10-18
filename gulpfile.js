@@ -9,8 +9,8 @@ var imagemin = require('gulp-imagemin');
 var sourcemaps = require('gulp-sourcemaps');
 var rjs = require('gulp-requirejs');
 
-// var theme = "canvas";
-var theme = "inspinia";
+var theme = "canvas";
+// var theme = "inspinia";
 
 gulp.task('connect-sync', function() {
   connect.server({}, function (){

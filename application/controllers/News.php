@@ -165,6 +165,137 @@ class News extends CI_Controller {
 		$this->template->frontend('news/newsdetail',$data);
 	}
 	
+	public function seminar($type = 'seminar'){
+		$data = array();
+
+		$condition = array();
+
+		$condition['fide'] = "*";
+
+		if($type == 'news'){
+			$data['Pages'] = 'News & Press release';
+			$condition['where'] = "(article_type = 1 OR article_type = 2)";
+		}else if($type == 'publicities'){
+			$condition['where'] = "article_type = 3";
+			$data['Pages'] = 'Publicities';
+		}else if($type == 'seminar'){
+			$condition['where'] = "article_type = 4";
+			$data['Pages'] = 'Seminar Conference';
+		}else if($type == 'activity'){
+			$condition['where'] = "article_type = 5";
+			$data['Pages'] = 'Seminar Activity';
+		}
+
+
+		$condition['where'].= " AND article_status != 0 AND article_show = 1";
+		$condition['orderby'] = "article_sort ASC,article_datecreate DESC";
+		$data['listnews'] = $this->news->listData($condition);
+
+		$data['typepage'] = $type;
+
+		$this->template->frontend('news/release',$data);
+	}
+
+	public function seminarscontent($id = "",$type = 'seminar'){
+		$data = array();
+		if(!empty($id)){
+			$condition = array();
+
+			$condition['fide'] = "*";
+			if($type == 'news'){
+				$data['Pages'] = 'News & Press release';
+				$condition['where'] = "(article_type = 1 OR article_type = 2)";
+			}else if($type == 'publicities'){
+				$condition['where'] = "article_type = 3";
+				$data['Pages'] = 'Publicities';
+			}else if($type == 'seminar'){
+				$condition['where'] = "article_type = 4";
+				$data['Pages'] = 'Seminar Conference';
+			}else if($type == 'activity'){
+				$condition['where'] = "article_type = 5";
+				$data['Pages'] = 'Seminar Activity';
+			}
+
+			$data['typepage'] = $type;
+
+			$condition['where'].= " AND article_status != 0 AND article_id = ".$id;
+			$data['listnews'] = $this->news->listData($condition);
+
+			if(count($data['listnews']) == 0){
+				show_404();
+			}
+		}else{
+			show_404();
+		}
+
+		$this->template->frontend('news/newsdetail',$data);
+	}
+	
+	public function specialactivity($type = 'specialactivity'){
+		$data = array();
+
+		$condition = array();
+
+		$condition['fide'] = "*";
+
+		if($type == 'news'){
+			$data['Pages'] = 'News & Press release';
+			$condition['where'] = "(article_type = 1 OR article_type = 2)";
+		}else if($type == 'publicities'){
+			$condition['where'] = "article_type = 3";
+			$data['Pages'] = 'Publicities';
+		}else if($type == 'seminar'){
+			$condition['where'] = "article_type = 4";
+			$data['Pages'] = 'Seminar Conference';
+		}else if($type == 'specialactivity'){
+			$condition['where'] = "article_type = 5";
+			$data['Pages'] = 'Special Activity';
+		}
+
+
+		$condition['where'].= " AND article_status != 0 AND article_show = 1";
+		$condition['orderby'] = "article_sort ASC,article_datecreate DESC";
+		$data['listnews'] = $this->news->listData($condition);
+
+		$data['typepage'] = $type;
+
+		$this->template->frontend('news/release',$data);
+	}
+
+	public function activitycontent($id = "",$type = 'specialactivity'){
+		$data = array();
+		if(!empty($id)){
+			$condition = array();
+
+			$condition['fide'] = "*";
+			if($type == 'news'){
+				$data['Pages'] = 'News & Press release';
+				$condition['where'] = "(article_type = 1 OR article_type = 2)";
+			}else if($type == 'publicities'){
+				$condition['where'] = "article_type = 3";
+				$data['Pages'] = 'Publicities';
+			}else if($type == 'seminar'){
+				$condition['where'] = "article_type = 4";
+				$data['Pages'] = 'Seminar Conference';
+			}else if($type == 'specialactivity'){
+				$condition['where'] = "article_type = 5";
+				$data['Pages'] = 'Special Activity';
+			}
+
+			$data['typepage'] = $type;
+
+			$condition['where'].= " AND article_status != 0 AND article_id = ".$id;
+			$data['listnews'] = $this->news->listData($condition);
+
+			if(count($data['listnews']) == 0){
+				show_404();
+			}
+		}else{
+			show_404();
+		}
+
+		$this->template->frontend('news/newsdetail',$data);
+	}
 	public function gallery(){
 		$data = array();
 

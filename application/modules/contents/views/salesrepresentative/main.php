@@ -41,6 +41,7 @@
                   <tr>
                       <th style="width:10%;">#</th>
                       <th style="width:40%;">Page Name</th>
+                      <th style="width:10%; text-align: center">Sort</th>
                       <th style="width:15%;">Edit By</th>
                       <th style="width:15%; text-align: center">Action</th>
                       <th style="width:15%; text-align: center">Hide / Show</th>
@@ -51,6 +52,7 @@
                   <tr class="gradeX">
                       <td><strong><?="P".str_pad($value['salerep_id'],5,"0",STR_PAD_LEFT);?></strong></td>
                       <td class="project-title"><?=$value['salerep_company'];?></td>
+                      <td style="text-align: center"> <?=$value['salerep_sort'];?> </td>
                       <td class="center">
                         <?=$value['salerep_editby'];?><br />
                         <small class="text-muted"><i class="fa fa-clock-o"></i> <?=date('d M Y h:i A', strtotime($value['salerep_lastedit']));?></small>

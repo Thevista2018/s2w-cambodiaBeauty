@@ -150,4 +150,27 @@ class Subcontents extends MX_Controller {
 		die;
 	}
 
+	public function show($con_id,$id){
+
+        $data['consub_id'] = $id;
+        $data['consub_show'] = 1;
+
+        $this->subcontents->updateData($data);
+        
+        redirect('contents/subcontents/index/'.$con_id);
+        
+    }
+
+    public function hide($con_id,$id){
+        
+        $data['consub_id'] = $id;
+        $data['consub_show'] = 2;
+
+        $this->subcontents->updateData($data);
+        
+        redirect('contents/subcontents/index/'.$con_id);
+
+    }
+
+
 }

@@ -4,6 +4,11 @@ body{
 }
 /* ===============================  font size  =============================== */
 
+#header {
+    position: relative;
+	border-bottom: 1px solid #F5F5F5;
+	background-image: url('../images/logo/bg_item01.png');
+}
 
 /* ===============================  color =============================== */
 .border-color-blue{

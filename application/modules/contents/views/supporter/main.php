@@ -46,10 +46,11 @@
                   <thead>
                   <tr>
                       <th style="width:10%;">#</th>
-                      <th style="width:40%;">Page Name</th>
+                      <th style="width:30%;">Page Name</th>
                       <th style="width:10%; text-align: center;">Sort</th>
                       <th style="width:15%;">Edit By</th>
                       <th style="width:15%;">Action</th>
+                      <th style="width:10%;"></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -71,9 +72,21 @@
                             <ul class="dropdown-menu">
                               <li><a href="<?=site_url('contents/supportertype/index/'.$value['supporter_id']);?>"><i class="fa fa-plus-square"></i> Sub page</a></li>
                               <li><a href="<?=site_url('contents/supporter/form/'.$value['supporter_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
+                              <?PHP if($value['supporter_show']  != 1){ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/supporter/show/'.$value['supporter_id']);?>"><i class="fa fa-eye"></i> Show</a></li>
+                              <?PHP }else{ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/supporter/hide/'.$value['supporter_id']);?>"><i class="fa fa-eye-slash"></i> Hide</a></li>
+                              <?PHP } ?>
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('contents/supporter/delete/'.$value['supporter_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>
+                      </td>
+                      <td class="center">
+                        <?PHP if($value['supporter_show'] == 1){?>
+                          <span class="label label-info">Active</span>
+                        <?PHP }else{ ?>
+                          <span class="label label-danger">Deactivate</span>
+                        <?PHP }?>
                       </td>
                   </tr>
                   <?PHP }?>

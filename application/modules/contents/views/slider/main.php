@@ -46,10 +46,11 @@
                   <thead>
                   <tr>
                     <th style="width:10%;">#</th>
-                    <th style="width:50%;">Slider</th>
+                    <th style="width:40%;">Slider</th>
                     <th style="width:10%;">Sort</th>
                     <th style="width:15%;">Edit By</th>
                     <th style="width:15%;">Action</th>
+                    <th style="width:10%;"></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -99,9 +100,21 @@
                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" aria-expanded="false">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
                               <li><a href="<?=site_url('contents/slider/form/'.$value['slider_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
+                              <?PHP if($value['slider_show']  != 1){ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/slider/show/'.$value['slider_id']);?>"><i class="fa fa-eye"></i> Show</a></li>
+                              <?PHP }else{ ?>
+                                <li><a class="Btn-eye" data-url="<?=site_url('contents/slider/hide/'.$value['slider_id']);?>"><i class="fa fa-eye-slash"></i> Hide</a></li>
+                              <?PHP } ?>
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('contents/slider/delete/'.$value['slider_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>
+                      </td>
+                      <td class="center">
+                        <?PHP if($value['slider_show'] == 1){?>
+                          <span class="label label-info">Active</span>
+                        <?PHP }else{ ?>
+                          <span class="label label-danger">Deactivate</span>
+                        <?PHP }?>
                       </td>
                   </tr>
                   <?PHP }?>

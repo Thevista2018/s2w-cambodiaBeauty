@@ -136,13 +136,15 @@
                     <label class="col-sm-2">Fax</label>
                     <div class="col-sm-10"><input type="text" name="Text_Fax" id="Text_Fax" value="<?=$Text_Fax;?>" class="form-control"></div>
                 </div>
+                <div class="hr-line-dashed"></div>
+                <div class="form-group">
+                    <div class="col-sm-12" align="right">
+                        <button class="btn btn-w-m btn-danger Btn-reload" type="button">Reset</button>
+                        <button class="btn btn-w-m btn-primary" type="submit">Save changes</button>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="col-sm-12" align="right">
-        <button class="btn btn-w-m btn-danger Btn-reload" type="button">Reset</button>
-        <button class="btn btn-w-m btn-primary" type="submit">Save changes</button>
-       <div style="padding-top: 40px;"></div>
     </div>
 </div>
 </div>

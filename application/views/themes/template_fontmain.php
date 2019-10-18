@@ -75,7 +75,7 @@
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/magnific-popup.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/responsive.css')?>" type="text/css" />
         <link rel="stylesheet" href="<?=base_url('assets/canvas/css/components/radio-checkbox.css')?>" type="text/css" />
-        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom.css?v=001')?>" type="text/css" />
+        <link rel="stylesheet" href="<?=base_url('assets/canvas/css/custom.css?v=002')?>" type="text/css" />
 
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title><?=$Text_nameweb_th;?></title>
@@ -106,8 +106,7 @@
    
     <div id="wrapper" class="clearfix">
 
-    <div id="top-bar">
-
+        <div id="top-bar">
 			<div class="container clearfix">
 
 				<div class="col_half nobottommargin"> </div>

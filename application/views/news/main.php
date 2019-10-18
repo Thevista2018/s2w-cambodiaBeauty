@@ -113,7 +113,7 @@
                 }else if($value['article_type'] == 4){
                   $ps = 'seminar';
                   $folder = 'Seminar';
-                  $Linkurl = site_url('seminarscontent/'.$value['article_id']);
+                  $Linkurl = site_url('news/seminarscontent/'.$value['article_id']);
                 }else if($value['article_type'] == 5){
                   $ps = 'activity';
                   $folder = 'Special Activity';

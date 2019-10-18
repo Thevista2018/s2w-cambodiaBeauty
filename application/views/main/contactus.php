@@ -146,7 +146,7 @@
 				</div>
 
 				<div class="col_full">
-					<button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Send Message</button>
+					<button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d button-rounded button-aqua">Send Message</button>
 				</div>
 
 			</form>

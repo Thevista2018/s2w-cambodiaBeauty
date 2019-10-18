@@ -113,6 +113,10 @@ if(isset($listdata) && count($listdata) != 0){
                                     <input type="hidden" name="Id" id="Id" value="<?PHP if(isset($Id)){echo $Id;}?>">
                                     <input type="hidden" name="Text_eye" id="Text_eye" class="Text_eye" value="<?PHP if(isset($Text_eye)){echo $Text_eye;}?>">
 
+                                    <?PHP if($type == "seminars"){ ?>
+                                      <input type="hidden" name="Text_showhomepage" id="Text_showhomepage" value="0">
+                                    <?PHP } ?>
+
                                     <input type="hidden" name="Text_check" id="Text_check" class="Text_check" value="<?PHP if(isset($Text_check)){echo $Text_check;}?>">
                                     <div class="form-group"><label class="col-sm-2 control-label">Title<span class="text-muted">*</span></label>
                                         <div class="col-sm-10"><input type="text" name="Text_title" id="Text_title" class="form-control" value="<?PHP if(isset($Text_title)){echo $Text_title;}?>"></div>
@@ -170,7 +174,7 @@ if(isset($listdata) && count($listdata) != 0){
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
-                                      <div class="col-sm-6 col-sm-offset-4">
+                                      <div class="col-sm-6 col-sm-offset-5">
                                           <a href="<?=site_url('article/custom/index/'.$type);?>">
                                           <button class="btn btn-w-m btn-danger" type="button">Cancel</button>
                                           </a>

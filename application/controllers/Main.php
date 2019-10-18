@@ -16,7 +16,7 @@ class Main extends CI_Controller {
 
 		$condition = array();
 		$condition['fide'] = "*";
-		$condition['where'] = array('slider_status' => 1);
+		$condition['where'] = array('slider_status' => 1,'slider_show' => 1);
 		$condition['orderby'] = 'slider_sort ASC,slider_id DESC';
 		$data['listSlider'] = $this->main->listSlider($condition);
 
@@ -116,22 +116,28 @@ class Main extends CI_Controller {
 	}
 
 	public function sentmailcontact(){
+		// $data = array(
+		// 	'TextName' => $this->input->post('TextName'),
+		// 	'TextEmail' => $this->input->post('TextEmail'),
+		// 	'TextSubject' => $this->input->post('TextSubject'),
+		// 	'TextMessage' => $this->input->post('TextMessage')
+		// );
+
 		$data = array(
-						'TextName' => $this->input->post('TextName'),
-						'TextEmail' => $this->input->post('TextEmail'),
-						'TextSubject' => $this->input->post('TextSubject'),
-						'TextMessage' => $this->input->post('TextMessage')
-						);
+			'TextName' => 'TEST',
+			'TextEmail' => 'TEST@EMAIL.COM',
+			'TextSubject' => 'TEST',
+			'TextMessage' => 'TEST'
+		);
 
 		// Mail HR
 		$condition = array();
-		$condition['fide'] = "set_emailcontact";
-		$condition['where'] = array('set_id' => 1);
+		$condition['fide'] = "set_emailcompany";
 		$listSettings = $this->main->listSettings($condition);
 
 		if(count($listSettings) != 0){
 			foreach ($listSettings as $key => $value) {
-				if(!empty($value['set_emailcontact'])){
+				if(!empty($value['set_emailcompany'])){
 					require_once APPPATH . 'third_party/PHPMailer_v5.0.2/class.phpmailer.php';
 					// require_once APPPATH . 'third_party/class.smtp.php';
 					$mail = new PHPMailer;
@@ -139,16 +145,20 @@ class Main extends CI_Controller {
 					$mail->IsSMTP();
 					$mail->SMTPDebug = 0;
 					$mail->SMTPAuth = true;
-					$mail->Host = "203.154.100.69";
-					$mail->Port = 25;
-					$mail->Username = "system@myanmartourismexpo.com";
-					$mail->Password = "System2560";
+					$mail->Host = "27.254.158.19";
+					$mail->Port = 587;
+					$mail->Username = "system@cambodiahealthbeauty.com";
+					$mail->Password = "klfo@!klbf5";
 
-					$mail->SetFrom( 'system@myanmartourismexpo.com' , 'myanmartourismexpo.com' );
-					$mail->AddAddress($value['set_emailcontact']);
+					$mail->SetFrom( 'system@cambodiahealthbeauty.com' , 'cambodiahealthbeauty.com' );
+					$mail->AddAddress($value['set_emailcompany']);
 					// $mail->AddAddress('a.w.wirasuk@hotmail.com');
 					$mail->Subject = "Message from :".$data['TextName'];
 					$message = $this->message_mail($data);
+
+					// print_r($message);
+					// die;
+
 					$mail->MsgHTML( $message );
 					if(!$mail->send()) {
 						$data_return = array(
