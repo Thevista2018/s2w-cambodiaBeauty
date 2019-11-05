@@ -16,12 +16,6 @@ class Main extends CI_Controller {
 
 		$condition = array();
 		$condition['fide'] = "*";
-		$condition['where'] = array('slider_status' => 1,'slider_show' => 1);
-		$condition['orderby'] = 'slider_sort ASC,slider_id DESC';
-		$data['listSlider'] = $this->main->listSlider($condition);
-
-		$condition = array();
-		$condition['fide'] = "*";
 		$condition['where'] = array('industry_status !=' => 0,'industry_show' => 1);
 		$condition['orderby'] = 'industry_sort ASC,industry_id DESC';
 		$data['listIndustry'] = $this->main->listIndustry($condition);

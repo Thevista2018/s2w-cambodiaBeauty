@@ -4,10 +4,30 @@ body{
 }
 /* ===============================  font size  =============================== */
 
-#header {
+#show-bg {
     position: relative;
 	border-bottom: 1px solid #F5F5F5;
-	background-image: url('../images/logo/bg_item01.png');
+	background-image: url('../images/logo/bg_item03.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* background-attachment: fixed; */
+	/* -o-background-size: 100% 100%, auto;
+	-moz-background-size: 100% 100%, auto;
+	-webkit-background-size: 100% 100%, auto; */
+}
+
+@media only screen and (min-width: 768px) {
+
+	#show-bg {
+		position: relative;
+		border-bottom: 1px solid #F5F5F5;
+		background-image: url('../images/logo/bg_item02.png');
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: unset;
+		background-size: 100% 100%, auto;
+	}
+
 }
 
 /* ===============================  color =============================== */
@@ -99,23 +119,59 @@ body{
 .display-grid-three-head-bar{
 	display: grid;
 	grid-template-columns: auto;
-	grid-gap: 10px;
 }
 
-#header #header-wrap{
-	/* display: unset; */
+.font-size-head-tpb{
+    font-family: 'HelveticaNeueBold';
+	font-size: 30px;
+	font-weight: 1200px;
+	font-weight: bold;
+}
+.font-size-subhead-tpb{
+    font-family: 'HelveticaNeueBold';
+	font-size: 16px;
+	font-weight: bold;
+	width: 300px;
+}
+.font-size-subhead-time{
+    font-family: 'HelveticaNeueBold';
+	font-size: 16px;
+	font-weight: bold;
+}
+.font-size-subhead-event{
+    font-family: 'HelveticaNeueBold';
+	font-size: 16px;
+	font-weight: bold;
+}
+
+#header {
+    background-color: transparent;
+}
+
+.border-1px-head{
+	border: 1px solid #e4e3e3;
+}
+
+.border-1px-headLeft{
+	border-left: 1px solid #e4e3e3;
+}
+
+#logo img {
+	height: 120px;
+}
+/* Visitor Registration & Online Exhibitor Manual */
+.img-size-headbar{
+	width: 80px;
 }
 
 @media only screen and (min-width: 768px) {
 	.display-grid-two-head-bar{
 		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-gap: 10px;
+		grid-template-columns: auto auto ;
 	}
 	.display-grid-three-head-bar{
 		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-gap: 10px;
+		grid-template-columns: 220px auto 220px;
 	}
 	#logo{
 		text-align: left;
@@ -128,6 +184,20 @@ body{
 	.font-size-subhead-tpb{
 		font-size: 16px;
 		font-weight: bold;
+		width: 300px;
+	}
+	
+	.widthLogoRegis{
+		width: 100px;
+	}
+	.img-size-headbar{
+		width: 60px;
+	}
+	#logo img {
+		height: auto !important;
+	}
+	.font-headber-Visitor, .font-headber-Exhibitor{
+		font-size: 12px;
 	}
 	
 
@@ -135,29 +205,98 @@ body{
 @media only screen and (min-width: 992px) {
 	.display-grid-two-head-bar{
 		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-gap: 10px;
+		grid-template-columns: auto auto;
 	}
 	.display-grid-three-head-bar{
 		display: grid;
-		grid-template-columns: auto auto auto;
-		grid-gap: 10px;
+		grid-template-columns: 280px auto 280px;
 	}
 	#logo{
 		text-align: left;
 	}
 	.font-size-head-tpb{
-		font-size: 34px;
+		font-size: 40px;
 		font-weight: 1200px;
 		font-weight: bold;
 	}
 	.font-size-subhead-tpb{
-		font-size: 16px;
+		font-size: 22px;
+		font-weight: bold;
+		width: 400px;
+	}
+	.font-size-subhead-time{
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.font-size-subhead-event{
+		font-size: 22px;
 		font-weight: bold;
 	}
 	#header #header-wrap{
 		display: unset;
 	}
+	.widthLogoRegis{
+		width: 120px;
+	}
+	.img-size-headbar{
+		width: 100px;
+	}
+	
+	.font-headber-Visitor, .font-headber-Exhibitor{
+		font-size: 14px;
+	}
+
+}
+
+@media only screen and (min-width: 1200px) {
+	
+	.display-grid-two-head-bar{
+		display: grid;
+		grid-template-columns: auto auto;
+	}
+	.display-grid-three-head-bar{
+		display: grid;
+		grid-template-columns: 350px auto 350px;
+	}
+
+	.font-size-head-tpb{
+		font-size: 60px;
+		font-weight: 1200px;
+		font-weight: bold;
+	}
+	.font-size-subhead-tpb{
+		font-size: 24px;
+		font-weight: bold;
+		width: 500px;
+	}
+	.font-size-subhead-time{
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.font-size-subhead-event{
+		font-size: 22px;
+		font-weight: bold;
+	}
+	#header #header-wrap{
+		display: unset;
+	}
+	#logo img {
+		height: 160px;
+	}
+	/* Visitor Registration & Online Exhibitor Manual */
+	.img-size-headbar{
+		width: 120px;
+	}
+	.font-headber-Visitor, .font-headber-Exhibitor{
+		font-size: 16px;
+	}
+	#logo{
+		margin-right: 0px;
+	}
+	.widthLogoRegis{
+		width: 140px;
+	}
+	
 
 }
 /* ===============================  navbar =============================== */
@@ -174,19 +313,48 @@ body{
 #header.sticky-style-2 {
 	height: 304px !important;
 }
+#header.sticky-style-2 #header-wrap{
+	background: #000 !important;
+}
+
+#header.sticky-style-2 {
+	height: 460px !important;
+}
+#primary-menu-trigger {
+	top: 5px;
+}
+
 @media only screen and (min-width: 576px) {
 	#header.sticky-style-2 {
-		height: 283px !important;
+		height: 460px !important;
+	}
+	#primary-menu-trigger {
+		top: 5px;
 	}
 }
 @media only screen and (min-width: 768px) {
 	#header.sticky-style-2 {
-		height: 136px !important;
+		height: 200px !important;
 	}
 }
 @media only screen and (min-width: 992px) {
 	#header.sticky-style-2 {
-		height: 184px !important;
+		/* height: 184px !important; */
+		height: 310px !important;
+	}
+
+}
+@media only screen and (min-width: 1188px) {
+	#header.sticky-style-2 {
+		/* height: 184px !important; */
+		height: 250px !important;
+	}
+
+}
+@media only screen and (min-width: 1200px) {
+	#header.sticky-style-2 {
+		/* height: 184px !important; */
+		height: 290px !important;
 	}
 
 }

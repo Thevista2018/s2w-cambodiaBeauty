@@ -44,7 +44,7 @@
                       <th style="width:10%; text-align: center">Sort</th>
                       <th style="width:15%;">Edit By</th>
                       <th style="width:15%; text-align: center">Action</th>
-                      <th style="width:15%; text-align: center">Hide / Show</th>
+                      <th style="width:15%; text-align: center"></th>
                   </tr>
                   </thead>
                   <tbody>
@@ -61,13 +61,12 @@
                         <div class="btn-group">
                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" aria-expanded="false">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                              <li><a href="<?=site_url('contents/salesrepresentative/index/'.$value['salerep_id']);?>"><i class="fa fa-plus-square"></i> Sub page</a></li>
+                              <li><a href="<?=site_url('contents/salesrepresentative/form/'.$value['salerep_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
                               <?PHP if($value['salerep_show']  != 1){ ?>
                                 <li><a class="Btn-eye" data-url="<?=site_url('contents/salesrepresentative/show/'.$value['salerep_id']);?>"><i class="fa fa-eye"></i> Show</a></li>
                               <?PHP }else{ ?>
                                 <li><a class="Btn-eye" data-url="<?=site_url('contents/salesrepresentative/hide/'.$value['salerep_id']);?>"><i class="fa fa-eye-slash"></i> Hide</a></li>
                               <?PHP } ?>
-                              <li><a href="<?=site_url('contents/salesrepresentative/form/'.$value['salerep_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
                               <li><a href="#" class="Btn-delete" data-url="<?=site_url('contents/salesrepresentative/delete/'.$value['salerep_id']);?>"><i class="fa fa-trash"></i> Delete</a></li>
                             </ul>
                         </div>

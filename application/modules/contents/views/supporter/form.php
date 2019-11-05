@@ -67,7 +67,7 @@ if(isset($listdata) && count($listdata) != 0){
                                     <input type="hidden" name="Id" id="Id" value="<?PHP if(isset($Id)){echo $Id;}?>">
 
                                     <div class="form-group">
-                                        <label class="col-sm-2 control-label">Name supporter <br/><small>(color back)</small><span class="text-muted">*</span></label>
+                                        <label class="col-sm-2 control-label">Name supporter <br/><small>(color black)</small><span class="text-muted">*</span></label>
                                         <div class="col-sm-4"><input type="text" name="Text_Title" id="Text_Title" class="form-control" value="<?PHP if(isset($Text_Title)){echo $Text_Title;}?>"></div>
                                         <label class="col-sm-2 control-label">Name supporter <br/><small>(color blue)</small><span class="text-muted">*</span></label>
                                         <div class="col-sm-4"><input type="text" name="Text_Title2" id="Text_Title2" class="form-control" value="<?PHP if(isset($Text_Title2)){echo $Text_Title2;}?>"></div>

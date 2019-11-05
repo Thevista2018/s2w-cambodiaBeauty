@@ -88,10 +88,10 @@ class Preregis extends MX_Controller {
 		$objPHPExcel->getProperties()->setDescription("Myanmarbuilddecor");
 
 		$condition = array();
-			$condition['fide'] = "CONCAT('MBD',LPAD(visitor_id, 5, '0')) As URN,visitor_title,visitor_firstname,visitor_lastname,visitor_jobtitle,visitor_company,visitor_address,visitor_address2,visitor_postcode,visitor_country,visitor_nationality,visitor_province,CONCAT(visitor_phone1,'-',visitor_phone2,'-',visitor_phone3) As Phone,";
+		$condition['fide'] = "CONCAT('MBD',LPAD(visitor_id, 5, '0')) As URN,visitor_title,visitor_firstname,visitor_lastname,visitor_jobtitle,visitor_company,visitor_address,visitor_address2,visitor_postcode,visitor_country,visitor_nationality,visitor_province,CONCAT(visitor_phone1,'-',visitor_phone2,'-',visitor_phone3) As Phone,";
 		$condition['fide'].= "CONCAT(visitor_fax1,'-',visitor_fax2,'-',visitor_fax3) As Fax,";
 		$condition['fide'].= "CONCAT(visitor_mobile1,'-',visitor_mobile2,'-',visitor_mobile3) As Mobile,visitor_email,visitor_web";
-			$dataArray = $this->preregis->listData($condition);
+		$dataArray = $this->preregis->listData($condition);
 		$objPHPExcel->getActiveSheet()->fromArray(array_keys(current($dataArray)), null, 'A1');
 
 		$objPHPExcel->getActiveSheet()->fromArray($dataArray,null, 'A2');

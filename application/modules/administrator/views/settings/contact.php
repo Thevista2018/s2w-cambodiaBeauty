@@ -23,7 +23,7 @@
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li>Settings</li>
-            <li class="active"><strong>Website</strong></li>
+            <li class="active"><strong>Contact</strong></li>
         </ol>
     </div>
     <div class="col-lg-2"></div>

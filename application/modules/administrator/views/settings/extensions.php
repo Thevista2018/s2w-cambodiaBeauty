@@ -66,11 +66,11 @@
         <div class="ibox float-e-margins">
             <div class="ibox-content">
                 <div class="well well-lg">
-                  <h3><?=$this->lang->line('head_keyword');?></h3>
+                  <h3>Keyword</h3>
                   คือ คีย์เวิร์ดที่เกี่ยวข้องเว็บไซต์ สำหรับเพิ่มการค้นหาใน Google ประมาณ 10 คีย์เวิร์ด และใช้เครื่องหมายคอมม่า (,) คั่นระหว่างคีย์เวิร์ดแต่ละคำ โดยไม่ต้องเว้นวรรคข้างหลังคอมม่า
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-12"><input type="text" id="Text_Keywords" name="Text_Keywords" placeholder="<?=$this->lang->line('head_keyword');?>" class="form-control" value="<?=$Text_Keywords;?>"></div>
+                    <div class="col-sm-12"><input type="text" id="Text_Keywords" name="Text_Keywords" placeholder="Keyword" class="form-control" value="<?=$Text_Keywords;?>"></div>
                 </div>
             </div>
         </div>
@@ -79,11 +79,11 @@
         <div class="ibox float-e-margins">
             <div class="ibox-content">
                 <div class="well well-lg">
-                  <h3><?=$this->lang->line('head_descriptions');?></h3>
+                  <h3>Descriptions</h3>
                   คือ คำอธิบายที่เกี่ยวกับ Website จะไม่แสดงในเว็บไซต์ แต่จะแสดงที่หน้าการแสดงผลการค้นหาของ Google
                 </div>
                 <div class="form-group">
-                    <div class="col-sm-12"><textarea maxlength="170"  type="text" id="Text_Description" name="Text_Description" rows="8" placeholder="<?=$this->lang->line('head_descriptions');?>" class="form-control"><?=$Text_Description;?></textarea></div>
+                    <div class="col-sm-12"><textarea maxlength="170"  type="text" id="Text_Description" name="Text_Description" rows="8" placeholder="Descriptions" class="form-control"><?=$Text_Description;?></textarea></div>
                 </div>
             </div>
         </div>

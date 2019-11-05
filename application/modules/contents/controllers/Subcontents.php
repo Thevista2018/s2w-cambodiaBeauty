@@ -125,6 +125,7 @@ class Subcontents extends MX_Controller {
 				'consub_page_th' => $this->input->post('Text_namePageTH'),
 				'consub_decision_th' => $this->input->post('Text_decisionTH'),
 				'consub_url' => $this->input->post('Text_url'),
+				'consub_detail_th' => $this->input->post('Text_detailPageTH'),
 				'consub_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'consub_lastedit' => date('Y-m-d H:i:s'),
 				'consub_status' => 1

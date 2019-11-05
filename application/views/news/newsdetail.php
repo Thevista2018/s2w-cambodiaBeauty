@@ -62,7 +62,7 @@
 								============================================= -->
 								<div class="entry-image">
                   <?PHP if(empty($Videourl)){ ?>
-									<a href="#"><img src="<?=base_url('uploads/custom/'.$Image);?>" alt=""></a>
+									<!-- <a href="#"><img src="<?=base_url('uploads/custom/'.$Image);?>" alt=""></a> -->
                   <?PHP }else {?>
                   <iframe src="<?=$Videourl;?>" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                   <?PHP }?>

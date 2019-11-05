@@ -24,7 +24,7 @@
                 <div class="ibox-content">
                     <div class="file-manager">
                         <h5>Show:</h5>
-                        <a href="javascript:void(0)" class="file-control file-type active" data-type="Ale">Ale</a>
+                        <a href="javascript:void(0)" class="file-control file-type active" data-type="Ale">All</a>
                         <a href="javascript:void(0)" class="file-control file-type" data-type="Documents">Documents</a>
                         <a href="javascript:void(0)" class="file-control file-type" data-type="Audio">Audio</a>
                         <a href="javascript:void(0)" class="file-control file-type" data-type="Images">Images</a>

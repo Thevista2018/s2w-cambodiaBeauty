@@ -94,12 +94,12 @@ if(isset($listdata) and count($listdata) != 0){
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
-                                      <label class="col-sm-2 control-label">sort</label>
+                                      <label class="col-sm-2 control-label">Sort</label>
                                       <div class="col-sm-4"><input type="text" name="Text_sort" id="Text_sort" class="form-control" value="<?PHP if(isset($Text_Sort)){echo $Text_Sort;}?>"></div>
                                     </div>
                                     <div class="hr-line-dashed"></div>
                                     <div class="form-group">
-                                      <label class="col-sm-2 control-label">Wigth</label>
+                                      <label class="col-sm-2 control-label">Width</label>
                                       <div class="col-sm-4"><input type="text" name="Text_Wigth" id="Text_Wigth" class="form-control" value="<?PHP if(isset($Text_wight)){echo $Text_wight;}?>"></div>
                                     </div>
                                     <div class="hr-line-dashed"></div>

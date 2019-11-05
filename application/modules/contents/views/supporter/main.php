@@ -46,7 +46,7 @@
                   <thead>
                   <tr>
                       <th style="width:10%;">#</th>
-                      <th style="width:30%;">Page Name</th>
+                      <th style="width:30%;">Title</th>
                       <th style="width:10%; text-align: center;">Sort</th>
                       <th style="width:15%;">Edit By</th>
                       <th style="width:15%;">Action</th>
@@ -70,7 +70,7 @@
                         <div class="btn-group">
                           <button data-toggle="dropdown" class="btn btn-primary btn-sm dropdown-toggle" aria-expanded="false">Action <span class="caret"></span></button>
                             <ul class="dropdown-menu">
-                              <li><a href="<?=site_url('contents/supportertype/index/'.$value['supporter_id']);?>"><i class="fa fa-plus-square"></i> Sub page</a></li>
+                              <li><a href="<?=site_url('contents/supportertype/index/'.$value['supporter_id']);?>"><i class="fa fa-plus-square"></i> Add Logo</a></li>
                               <li><a href="<?=site_url('contents/supporter/form/'.$value['supporter_id']);?>"><i class="fa fa-pencil"></i> Edit</a></li>
                               <?PHP if($value['supporter_show']  != 1){ ?>
                                 <li><a class="Btn-eye" data-url="<?=site_url('contents/supporter/show/'.$value['supporter_id']);?>"><i class="fa fa-eye"></i> Show</a></li>

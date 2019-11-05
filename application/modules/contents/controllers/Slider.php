@@ -55,17 +55,18 @@ class Slider extends MX_Controller {
 		if($this->tokens->verify('crfslider')){
 
 			$data = array(
-				'slider_id' => $this->input->post('Id'),
+				// 'slider_id' => $this->input->post('Id'),
 				'slider_type' => $this->input->post('Text_slidertype'),
 				'slider_name' => $this->upfile('File_images'),
 				'slider_imagesvideo' => $this->upfile('File_videoimages'),
 				'slider_video' => $this->upfile('File_video'),
 				'slider_url' => $this->input->post('Text_linkurl'),
-				'slider_msg_th' => $this->input->post('Text_msgTH'),
-				'slider_color' => $this->input->post('Text_colors'),
+				// 'slider_msg_th' => $this->input->post('Text_msgTH'),
+				// 'slider_color' => $this->input->post('Text_colors'),
 				'slider_link' => $this->input->post('Text_link'),
 				'slider_sort' => $this->input->post('Text_sort'),
 				'slider_status' => 1,
+				'slider_show' => 1,
 				'slider_createby' => $this->encryption->decrypt($this->input->cookie('sysn')),
 				'slider_datecreate' => date('Y-m-d H:i:s'),
 				'slider_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),

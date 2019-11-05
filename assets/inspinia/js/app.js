@@ -1,5 +1,5 @@
 requirejs.config({
-    // baseUrl: 'http://cambodiahealthbeauty.com/assets/inspinia/js/lib',
+    // baseUrl: 'http://www.cambodiahealthbeauty.com/assets/inspinia/js/lib',
     baseUrl: 'http://localhost:8001/assets/inspinia/js/lib',
     paths: {
         jquery: 'jquery-2.1.1',

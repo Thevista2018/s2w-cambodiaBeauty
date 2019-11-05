@@ -10,7 +10,7 @@
                 <a href="<?=site_url('contents/supporter/index')?>">Supporter</a>
             </li>
             <li class="active">
-                <strong>Supporter Detail</strong>
+                <strong>Supporter Logo</strong>
             </li>
         </ol>
     </div>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="col-sm-4">
                   <a href="<?=site_url('contents/supportertype/form/'.$supporter_id);?>">
-                    <button class="btn btn-w-m btn-primary btn-sm pull-right">Add Pages</button>
+                    <button class="btn btn-w-m btn-primary btn-sm pull-right">Add Logo</button>
                   </a>
                   <div class="input-group">
                     <input type="text" placeholder="Search" name="search-draw" id="search-draw" class="input-sm form-control">
@@ -49,7 +49,7 @@
                   <thead>
                   <tr>
                     <th style="width:10%;">#</th>
-                    <th style="width:60%;">Page Name</th>
+                    <th style="width:60%;">Images Logo</th>
                     <th style="width:15%;">Edit By</th>
                     <th style="width:15%;">Action</th>
                   </tr>

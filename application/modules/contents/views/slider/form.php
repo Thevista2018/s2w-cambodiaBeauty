@@ -56,7 +56,7 @@ if(isset($listdata) and count($listdata) != 0){
                   <select name="Text_slidertype" id="Text_slidertype" tabindex="9" class="form-control">
                       <option value="1" <?PHP if(isset($Text_slidertype) && $Text_slidertype == 1){echo 'selected';}?>>Images</option>
                       <option value="2" <?PHP if(isset($Text_slidertype) && $Text_slidertype == 2){echo 'selected';}?>>Video</option>
-                      <option value="3" <?PHP if(isset($Text_slidertype) && $Text_slidertype == 3){echo 'selected';}?>>Url iframe</option>
+                      <!-- <option value="3" <?PHP if(isset($Text_slidertype) && $Text_slidertype == 3){echo 'selected';}?>>Url iframe</option> -->
                   </select>
                 </div>
             </div>
@@ -96,14 +96,14 @@ if(isset($listdata) and count($listdata) != 0){
               </div>
               <div class="hr-line-dashed"></div>
             </div>
-            <div class="form-group"><label class="col-sm-2 control-label">Msg</label>
+            <!-- <div class="form-group"><label class="col-sm-2 control-label">Msg</label>
                 <div class="col-sm-10"><input type="text" name="Text_msgTH" id="Text_msgTH" class="form-control" value="<?PHP if(isset($Text_msgTH)){echo $Text_msgTH;}?>"></div>
             </div>
             <div class="hr-line-dashed"></div>
             <div class="form-group"><label class="col-sm-2 control-label">Color</label>
                 <div class="col-sm-10"><input type="text" name="Text_colors" id="Text_colors" class="form-control colorpicker" value="<?PHP if(isset($Text_colors)){echo $Text_colors;}?>"></div>
-            </div>
-            <div class="hr-line-dashed"></div>
+            </div> -->
+            <!-- <div class="hr-line-dashed"></div> -->
             <div class="form-group"><label class="col-sm-2 control-label">Link</label>
                 <div class="col-sm-10"><input type="text" name="Text_link" id="Text_link" class="form-control" value="<?PHP if(isset($Text_link)){echo $Text_link;}?>"></div>
             </div>

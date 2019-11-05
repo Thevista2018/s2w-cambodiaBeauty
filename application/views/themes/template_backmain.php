@@ -117,6 +117,9 @@ if(isset($list_settings) && count($list_settings) != 0){
             <li>
                 <a href="<?=site_url('administrator/main');?>"><i class="fa fa-group"></i> <span class="nav-label">Administrators</span></a>
             </li>
+            <li>
+                <a href="<?=site_url('manual/HOME.html');?>" target="_bank"><i class="fa fa-folder-open-o"></i> <span class="nav-label">Manual</span></a>
+            </li>
         </ul>
 
     </div>

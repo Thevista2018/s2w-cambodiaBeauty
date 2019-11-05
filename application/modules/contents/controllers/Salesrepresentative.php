@@ -125,17 +125,17 @@ class Salesrepresentative extends MX_Controller {
 			);
 	}
 
-	// public function delete($Id){
-	// 	$data = array(
-	// 		'salesrepresentative_id' => $Id,
-	// 		'salesrepresentative_status' => 0,
-	// 		'salesrepresentative_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
-	// 		'salesrepresentative_lastedit' => date('Y-m-d H:i:s')
-	// 	);
-	// 	$this->salesrepresentative->updateData($data);
-	// 	header("location:".site_url('contents/salesrepresentative/index'));
-	// 	die;
-	// }
+	public function delete($Id){
+		$data = array(
+			'salerep_id' => $Id,
+			'salerep_status' => 0,
+			'salerep_editby' => $this->encryption->decrypt($this->input->cookie('sysn')),
+			'salerep_lastedit' => date('Y-m-d H:i:s')
+		);
+		$this->salesrepresentative->updateData($data);
+		header("location:".site_url('contents/salesrepresentative/index'));
+		die;
+	}
 
 	private function upfileimages($Fild_Name){
 		$fileold = $this->input->post($Fild_Name.'_old');
